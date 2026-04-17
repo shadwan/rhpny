@@ -13,7 +13,7 @@ export function Physician() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
                 <Image
-                  src="/images/team/ajit-dhaliwal.png"
+                  src="/images/team/physician-authority.jpeg"
                   alt="Dr. Ajit Dhaliwal, Founder of Regen Health Physicians"
                   fill
                   className="object-cover"

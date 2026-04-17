@@ -1,37 +1,206 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { FadeUp, StaggerContainer, StaggerItem } from "@/components/motion";
+import { motion, AnimatePresence } from "motion/react";
+import { FadeUp } from "@/components/motion";
 
-const team = [
+type TeamMember = {
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+};
+
+const team: TeamMember[] = [
   {
     name: "Dr. Ravneet Dhaliwal",
     role: "Medical Director",
-    image: "/images/team/ravneet-dhaliwal.jpeg",
+    image: "/images/team/ravneet-dhaliwal.jpg",
+    bio: "Dr. Dhaliwal has worked at the front lines of acute inpatient care, managing patients during critical and transitional moments in their health. This experience has given her a deep understanding of both the strengths and limitations of traditional treatment pathways.",
   },
   {
     name: "Ajit Dhaliwal MD, MBA",
     role: "Founder and Clinical Vision",
-    image: "/images/team/ajit-dhaliwal.png",
+    image: "/images/team/ajit-dhaliwal.jpeg",
+    bio: "Internal Medicine\u2013trained physician with a performance-driven approach to health strategy. Regenerative and longevity-focused clinical advisor, educator, and program developer.",
   },
   {
     name: "Jay Maly",
     role: "Health Coach",
-    image: "/images/team/jay-maly.png",
+    image: "/images/team/jay-maly-v2.png",
+    bio: "I\u2019m focused on growing my brand, improving my products, and finding smarter ways to market and package my work. I\u2019m driven, curious, and committed to turning my design skills into something bigger.",
   },
   {
     name: "Will Michael",
     role: "Strategic Leadership and Platform Architecture",
-    image: "/images/team/will-michael.png",
+    image: "/images/team/will-michael-v2.png",
+    bio: "Will is a health executive and systems strategist focused on the future of regenerative and precision medicine. As a Partner of RegenHealth Physicians, he leads growth, innovation, and strategic development across concierge longevity, biologic therapies, and performance optimization programs.",
   },
   {
     name: "Jhonelle Gravesandy",
     role: "Family Nurse Practitioner",
-    image: "/images/team/jhonelle-gravesandy.png",
+    image: "/images/team/jhonelle-gravesandy-v2.png",
+    bio: "Jhonelle Gravesandy, FNP-BC \u2014 ANCC board-certified Family Nurse Practitioner with over a decade of experience in orthopedics, pain management, functional nutrition, regenerative medicine, and medical aesthetics. Her work blends evidence-based medicine with integrative, longevity-focused therapies to support healing, performance, and aesthetics wellness.",
   },
 ];
 
+function TeamCard({
+  member,
+  onClick,
+}: {
+  member: TeamMember;
+  onClick: () => void;
+}) {
+  return (
+    <div
+      className="group cursor-pointer"
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onClick();
+        }
+      }}
+      aria-label={`Read bio for ${member.name}`}
+    >
+      <div className="relative overflow-hidden rounded-2xl">
+        <div className="relative aspect-[3/4]">
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            sizes="(min-width: 1024px) 20vw, (min-width: 640px) 33vw, 50vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+          {/* Name + role */}
+          <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+            <h3 className="font-heading text-sm font-bold uppercase tracking-wide text-white sm:text-base">
+              {member.name}
+            </h3>
+            <p className="mt-0.5 line-clamp-2 text-[11px] font-medium leading-snug text-white/70 sm:text-xs">
+              {member.role}
+            </p>
+          </div>
+
+          {/* Arrow */}
+          <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-lg transition-transform duration-300 group-hover:scale-110 sm:h-9 sm:w-9">
+            <svg
+              className="h-3.5 w-3.5 text-gray-900 sm:h-4 sm:w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BioModal({
+  member,
+  onClose,
+}: {
+  member: TeamMember;
+  onClose: () => void;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
+      className="fixed inset-0 z-50 flex items-center justify-center px-4"
+      onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Bio for ${member.name}`}
+    >
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+
+      {/* Modal card */}
+      <motion.div
+        initial={{ opacity: 0, y: 24, scale: 0.97 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 16, scale: 0.97 }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-2xl overflow-hidden rounded-3xl bg-white shadow-2xl"
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-[240px_1fr]">
+          {/* Photo */}
+          <div className="relative aspect-[4/3] sm:aspect-auto sm:min-h-full">
+            <Image
+              src={member.image}
+              alt={member.name}
+              fill
+              sizes="(min-width: 640px) 240px, 100vw"
+              className="object-cover"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="flex flex-col justify-between p-6 sm:p-8">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-blue-900">
+                {member.role}
+              </p>
+              <h3 className="mt-2 font-heading text-2xl font-bold text-gray-900">
+                {member.name}
+              </h3>
+
+              <div className="mt-5 h-px w-10 bg-blue-900/20" />
+
+              <p className="mt-5 text-sm leading-[1.7] text-gray-600">
+                {member.bio}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Close button */}
+        <button
+          type="button"
+          onClick={onClose}
+          className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow-md backdrop-blur-sm transition-colors hover:bg-white"
+          aria-label="Close"
+        >
+          <svg
+            className="h-4 w-4 text-gray-900"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </motion.div>
+    </motion.div>
+  );
+}
+
 export function Team() {
+  const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
+
   return (
     <section className="bg-stone-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -44,27 +213,26 @@ export function Team() {
           </h2>
         </FadeUp>
 
-        <StaggerContainer className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+        <FadeUp className="mt-14 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
           {team.map((member) => (
-            <StaggerItem key={member.name}>
-              <div className="group text-center">
-                <div className="relative mx-auto aspect-square w-full max-w-[200px] overflow-hidden rounded-2xl bg-gray-200">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="mt-4 font-heading text-sm font-semibold text-gray-900">
-                  {member.name}
-                </h3>
-                <p className="mt-1 text-xs text-gray-500">{member.role}</p>
-              </div>
-            </StaggerItem>
+            <TeamCard
+              key={member.name}
+              member={member}
+              onClick={() => setActiveMember(member)}
+            />
           ))}
-        </StaggerContainer>
+        </FadeUp>
       </div>
+
+      {/* Bio modal */}
+      <AnimatePresence>
+        {activeMember && (
+          <BioModal
+            member={activeMember}
+            onClose={() => setActiveMember(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

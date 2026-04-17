@@ -27,7 +27,7 @@ export function SocialProof() {
                 alt={partner.name}
                 width={80}
                 height={80}
-                className="h-16 w-auto opacity-40 grayscale transition-all duration-300 hover:opacity-70 hover:grayscale-0 sm:h-20"
+                className="h-16 w-auto transition-transform duration-300 hover:scale-105 sm:h-20"
               />
             </StaggerItem>
           ))}

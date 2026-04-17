@@ -40,10 +40,10 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Image
-              src="/images/logos/regen-health-logo.png"
+              src="/logo.svg"
               alt={SITE_NAME}
-              width={120}
-              height={36}
+              width={180}
+              height={34}
               className="h-8 w-auto brightness-0 invert"
             />
             <p className="mt-4 text-sm leading-relaxed text-gray-500">

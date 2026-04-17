@@ -1,4 +1,4 @@
-import { DM_Sans, Inter } from "next/font/google";
+import { DM_Sans, Inter, Instrument_Serif } from "next/font/google";
 
 export const headingFont = DM_Sans({
   variable: "--font-heading",
@@ -12,4 +12,12 @@ export const bodyFont = Inter({
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600"],
+});
+
+export const editorialFont = Instrument_Serif({
+  variable: "--font-editorial",
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+  style: ["normal", "italic"],
 });

@@ -1,7 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/motion";
+
+const Threads = dynamic(() => import("@/components/Threads"), {
+  ssr: false,
+});
 
 const features = [
   {
@@ -40,10 +45,20 @@ const features = [
 
 export function Longevity() {
   return (
-    <section className="relative overflow-hidden bg-gray-950 py-20 sm:py-28">
-      {/* Background accents */}
-      <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-blue-900/20 blur-3xl" />
-      <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-blue-800/10 blur-3xl" />
+    <section className="relative overflow-hidden bg-[#020617] py-20 sm:py-28">
+      {/* Threads animated background */}
+      <div className="pointer-events-none absolute inset-0 opacity-70">
+        <Threads
+          color={[0.42, 0.71, 0.9]}
+          amplitude={1.2}
+          distance={0.15}
+          enableMouseInteraction={false}
+        />
+      </div>
+      {/* Radial blue glow for atmosphere */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-900/15 blur-[120px]" />
+      {/* Subtle vignette */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#020617]/80 via-transparent to-[#020617]/90" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -57,7 +72,7 @@ export function Longevity() {
             <FadeUp>
               <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Longevity Is Not a Treatment.{" "}
-                <span className="text-gray-500">It&apos;s a Program.</span>
+                <span className="text-blue-300">It&apos;s a Program.</span>
               </h2>
             </FadeUp>
             <FadeUp>
@@ -90,14 +105,14 @@ export function Longevity() {
           </div>
 
           {/* Feature grid */}
-          <StaggerContainer className="grid gap-4 sm:grid-cols-2">
+          <StaggerContainer className="grid auto-rows-fr gap-4 sm:grid-cols-2">
             {features.map((feature) => (
-              <StaggerItem key={feature.title}>
-                <div className="group rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:bg-white/10">
-                  <div className="mb-4 text-blue-400 transition-colors group-hover:text-blue-300">
+              <StaggerItem key={feature.title} className="h-full">
+                <div className="group flex h-full min-h-[170px] flex-col justify-between rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-blue-400/30 hover:bg-white/10">
+                  <div className="text-blue-400 transition-colors group-hover:text-blue-300">
                     {feature.icon}
                   </div>
-                  <p className="text-sm font-medium leading-relaxed text-gray-300">
+                  <p className="mt-6 text-sm font-medium leading-relaxed text-gray-300">
                     {feature.title}
                   </p>
                 </div>

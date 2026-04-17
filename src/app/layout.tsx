@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { headingFont, bodyFont } from "@/lib/fonts";
+import { headingFont, bodyFont, editorialFont } from "@/lib/fonts";
 import "./globals.css";
 import { Figtree } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -68,7 +68,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", headingFont.variable, bodyFont.variable, "font-sans", figtree.variable)}
+      className={cn("h-full", headingFont.variable, bodyFont.variable, editorialFont.variable, "font-sans", figtree.variable)}
     >
       <body className="min-h-full flex flex-col font-body antialiased">
         {children}

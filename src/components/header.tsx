@@ -41,7 +41,7 @@ const sections: NavSection[] = [
       },
       {
         label: "Aesthetics",
-        href: "#services",
+        href: "/aesthetics",
         description: "Physician-led skin and rejuvenation.",
       },
       {
@@ -55,7 +55,7 @@ const sections: NavSection[] = [
 
 const flatLinks: { label: string; href: string }[] = [
   { label: "Longevity Programs", href: "#programs" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/about" },
 ];
 
 export function Header() {

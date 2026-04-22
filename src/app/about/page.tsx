@@ -129,54 +129,40 @@ export default function AboutPage() {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative overflow-hidden bg-stone-50 pt-28 pb-20 sm:pb-28">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-              <FadeUp>
-                <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                  About Regen Health Physicians
+        <section className="relative overflow-hidden bg-stone-50 pt-32 pb-20 sm:pt-40 sm:pb-28">
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+            <FadeUp>
+              <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
+                About Regen Health Physicians
+              </span>
+              <h1 className="mt-6 font-heading text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
+                Medicine should be{" "}
+                <span className="text-blue-900">
+                  personal, precise, and accountable.
                 </span>
-                <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
-                  Medicine should be{" "}
-                  <span className="text-blue-900">
-                    personal, precise, and accountable.
-                  </span>
-                </h1>
-                <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl lg:leading-[1.6]">
-                  A physician-led concierge practice built on regenerative
-                  biology and honest clinical judgment. No volume clinics. No
-                  assembly lines. Protocols designed and overseen at the
-                  physician level — then carried through with concierge-level
-                  care.
-                </p>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Link
-                    href={BOOKING_URL}
-                    className="rounded-full bg-blue-900 px-7 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-blue-800 hover:shadow-xl"
-                  >
-                    Book a Consultation
-                  </Link>
-                  <Link
-                    href="#team"
-                    className="rounded-full border border-gray-300 px-7 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-gray-700 transition-all hover:border-blue-900/30 hover:text-blue-900"
-                  >
-                    Meet the Team
-                  </Link>
-                </div>
-              </FadeUp>
-
-              <FadeIn>
-                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-                  <Image
-                    src="/images/team/physician-authority.jpeg"
-                    alt="Dr. Ajit Dhaliwal, Founder"
-                    fill
-                    priority
-                    className="object-cover"
-                  />
-                </div>
-              </FadeIn>
-            </div>
+              </h1>
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl lg:leading-[1.6]">
+                A physician-led concierge practice built on regenerative
+                biology and honest clinical judgment. No volume clinics. No
+                assembly lines. Protocols designed and overseen at the
+                physician level — then carried through with concierge-level
+                care.
+              </p>
+              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Link
+                  href={BOOKING_URL}
+                  className="rounded-full bg-blue-900 px-7 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-blue-800 hover:shadow-xl"
+                >
+                  Book a Consultation
+                </Link>
+                <Link
+                  href="#team"
+                  className="rounded-full border border-gray-300 px-7 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-gray-700 transition-all hover:border-blue-900/30 hover:text-blue-900"
+                >
+                  Meet the Team
+                </Link>
+              </div>
+            </FadeUp>
           </div>
         </section>
 
@@ -298,53 +284,64 @@ export default function AboutPage() {
               </p>
             </FadeUp>
 
-            <div className="mt-16 space-y-20">
+            <div className="mt-16 divide-y divide-gray-200">
               {team.map((m, i) => (
-                <div
+                <article
                   key={m.name}
-                  className={`grid items-center gap-10 lg:grid-cols-[360px_1fr] lg:gap-16 ${
-                    i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
+                  className={`grid items-start gap-10 py-16 first:pt-0 last:pb-0 lg:grid-cols-12 lg:gap-14 ${
+                    i % 2 === 1 ? "lg:[&>*:first-child]:lg:order-2" : ""
                   }`}
                 >
-                  <FadeIn>
-                    <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden rounded-3xl">
+                  <FadeIn className="lg:col-span-4">
+                    <div className="relative mx-auto aspect-[3/4] w-full max-w-[260px] overflow-hidden rounded-2xl lg:max-w-[320px]">
                       <Image
                         src={m.image}
                         alt={m.name}
                         fill
-                        sizes="(min-width: 1024px) 360px, 100vw"
+                        sizes="(min-width: 1024px) 320px, 260px"
                         className="object-cover"
                       />
                     </div>
                   </FadeIn>
 
-                  <FadeUp>
-                    <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                      0{i + 1} — {m.role}
-                    </span>
-                    <h3 className="mt-3 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                      {m.name}
-                    </h3>
-                    <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
-                      {m.bio}
-                    </p>
-                    <div className="mt-6">
-                      <p className="text-[10px] font-semibold uppercase tracking-widest text-gray-500">
-                        Focus Areas
+                  <FadeUp className="lg:col-span-8">
+                    <div className="max-w-2xl">
+                      <div className="flex items-center gap-3">
+                        <span className="font-mono text-xs font-semibold tabular-nums text-blue-900/60">
+                          0{i + 1}
+                        </span>
+                        <span className="h-px flex-1 bg-gray-200 lg:flex-none lg:w-12" />
+                        <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-900">
+                          {m.role}
+                        </span>
+                      </div>
+
+                      <h3 className="mt-5 font-heading text-[1.75rem] font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-[2.25rem] lg:leading-[1.15]">
+                        {m.name}
+                      </h3>
+
+                      <p className="mt-5 text-base leading-[1.7] text-gray-600">
+                        {m.bio}
                       </p>
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {m.specialties.map((s) => (
-                          <span
-                            key={s}
-                            className="rounded-full border border-gray-200 bg-stone-50 px-3 py-1 text-xs font-medium text-gray-700"
-                          >
-                            {s}
-                          </span>
-                        ))}
+
+                      <div className="mt-8 border-t border-gray-100 pt-6">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
+                          Focus Areas
+                        </p>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {m.specialties.map((s) => (
+                            <span
+                              key={s}
+                              className="rounded-full border border-gray-200 bg-stone-50 px-3 py-1.5 text-xs font-medium text-gray-700"
+                            >
+                              {s}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </FadeUp>
-                </div>
+                </article>
               ))}
             </div>
           </div>

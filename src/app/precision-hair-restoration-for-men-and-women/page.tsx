@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FadeUp, FadeIn, StaggerContainer, StaggerItem } from "@/components/motion";
+import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { BOOKING_URL } from "@/lib/constants";
 
 const siteUrl = "https://rhpny.com";
@@ -301,40 +302,42 @@ export default function HairRestorationPage() {
           </div>
         </section>
 
-        {/* ─── Before/After Results ─────────────────────────────────── */}
+        {/* ─── Before/After Interactive Slider ──────────────────────── */}
         <section className="bg-stone-50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <FadeUp className="text-center">
+            <FadeUp className="mx-auto max-w-2xl text-center">
               <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
                 Real Results
               </span>
               <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Before &amp; After
               </h2>
+              <p className="mt-5 text-sm leading-relaxed text-gray-600 sm:text-base">
+                Drag the slider to compare outcomes. Individual results vary and
+                depend on candidacy, protocol, and biological factors.
+              </p>
             </FadeUp>
 
-            <StaggerContainer className="mt-12 grid gap-6 sm:grid-cols-2">
+            <StaggerContainer className="mt-12 grid gap-8 sm:grid-cols-2 lg:gap-10">
               <StaggerItem>
-                <div className="overflow-hidden rounded-3xl">
-                  <Image
-                    src="/images/hair-restoration/consultation.jpeg"
-                    alt="Hair restoration before and after — patient 1"
-                    width={800}
-                    height={500}
-                    className="w-full object-cover"
-                  />
-                </div>
+                <BeforeAfterSlider
+                  beforeSrc="/images/hair-restoration/patient1-before.jpg"
+                  afterSrc="/images/hair-restoration/patient1-after.jpg"
+                  beforeAlt="Patient 1 before hair restoration — diffuse thinning"
+                  afterAlt="Patient 1 after hair restoration — restored density"
+                  aspect="aspect-[3/4]"
+                  caption="Patient 1 — Crown & Frontal Thinning"
+                />
               </StaggerItem>
               <StaggerItem>
-                <div className="overflow-hidden rounded-3xl">
-                  <Image
-                    src="/images/hair-restoration/before-after.jpg"
-                    alt="Hair restoration before and after — patient 2"
-                    width={800}
-                    height={500}
-                    className="w-full object-cover"
-                  />
-                </div>
+                <BeforeAfterSlider
+                  beforeSrc="/images/hair-restoration/patient3-before.jpg"
+                  afterSrc="/images/hair-restoration/patient3-after.jpg"
+                  beforeAlt="Patient 2 before hair restoration — crown thinning"
+                  afterAlt="Patient 2 after hair restoration — regrowth"
+                  aspect="aspect-[3/4]"
+                  caption="Patient 2 — Crown Regrowth"
+                />
               </StaggerItem>
             </StaggerContainer>
           </div>

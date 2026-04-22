@@ -36,7 +36,7 @@ const sections: NavSection[] = [
       },
       {
         label: "Joint / Back / Orthopedic",
-        href: "#services",
+        href: "/joint-back-orthopedic",
         description: "Non-surgical pain and recovery care.",
       },
       {

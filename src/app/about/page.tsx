@@ -78,17 +78,6 @@ const team: Member[] = [
     ],
   },
   {
-    name: "Will Michael",
-    role: "Strategic Leadership & Platform Architecture",
-    image: "/images/team/will-michael-v2.png",
-    bio: "Will is a health executive and systems strategist focused on the future of regenerative and precision medicine. As a Partner of RegenHealth Physicians, he leads growth, innovation, and strategic development across concierge longevity, biologic therapies, and performance optimization programs.",
-    specialties: [
-      "Systems Strategy",
-      "Concierge Longevity",
-      "Platform Architecture",
-    ],
-  },
-  {
     name: "Jay Maly",
     role: "Health Coach",
     image: "/images/team/jay-maly-v2.png",

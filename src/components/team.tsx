@@ -32,12 +32,6 @@ const team: TeamMember[] = [
     bio: "I\u2019m focused on growing my brand, improving my products, and finding smarter ways to market and package my work. I\u2019m driven, curious, and committed to turning my design skills into something bigger.",
   },
   {
-    name: "Will Michael",
-    role: "Strategic Leadership and Platform Architecture",
-    image: "/images/team/will-michael-v2.png",
-    bio: "Will is a health executive and systems strategist focused on the future of regenerative and precision medicine. As a Partner of RegenHealth Physicians, he leads growth, innovation, and strategic development across concierge longevity, biologic therapies, and performance optimization programs.",
-  },
-  {
     name: "Jhonelle Gravesandy",
     role: "Family Nurse Practitioner",
     image: "/images/team/jhonelle-gravesandy-v2.png",

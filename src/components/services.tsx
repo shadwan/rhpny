@@ -42,8 +42,8 @@ const services: Service[] = [
       "Physician-performed treatments for skin quality, structure, and rejuvenation — without overcorrection.",
     image: "/images/services/aesthetics.jpeg",
     href: "/aesthetics",
-    spanClass: "md:row-span-2",
-    mobileAspect: "aspect-[4/5]",
+    spanClass: "",
+    mobileAspect: "aspect-[4/3]",
   },
   {
     title: "Joint / Back / Orthopedic",
@@ -57,9 +57,17 @@ const services: Service[] = [
     title: "Peptides",
     description:
       "Precision peptide protocols supporting recovery, performance, metabolism, and longevity.",
-    image: "/images/misc/medical-capsule.png",
-    href: "https://example.com/peptides",
-    external: true,
+    image: "/images/peptides/hero.jpeg",
+    href: "/peptides",
+    spanClass: "",
+    mobileAspect: "aspect-[4/3]",
+  },
+  {
+    title: "Chronic Disease",
+    description:
+      "Root-cause regenerative and functional care for autoimmune, metabolic, and chronic inflammatory conditions.",
+    image: "/images/chronic-disease/difference.jpeg",
+    href: "/chronic-disease",
     spanClass: "",
     mobileAspect: "aspect-[4/3]",
   },
@@ -224,7 +232,7 @@ export function Services() {
             Integrated Regenerative Care
           </h2>
           <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
-            Five specialties, one physician-led practice. Every protocol
+            Six specialties, one physician-led practice. Every protocol
             personalized to your biology.
           </p>
         </FadeUp>

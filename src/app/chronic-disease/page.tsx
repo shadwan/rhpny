@@ -10,145 +10,185 @@ import { BOOKING_URL } from "@/lib/constants";
 const siteUrl = "https://rhpny.com";
 
 export const metadata: Metadata = {
-  title: "Aesthetic Treatments | Regenerative Skin Medicine",
+  title: "Chronic Disease Management | Regenerative & Functional Medicine",
   description:
-    "Physician-led regenerative aesthetic treatments at Regen Health. Stem cell therapy, PRP, and peptide protocols for collagen rebuilding, skin renewal, and compounding long-term results. NYC & Salt Lake City.",
+    "Physician-led care for autoimmune, metabolic, and chronic inflammatory conditions. Regenerative therapies, functional medicine, and concierge oversight in NYC and Salt Lake City.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: `${siteUrl}/aesthetics`,
+    url: `${siteUrl}/chronic-disease`,
     siteName: "Regen Health Physicians",
-    title: "Aesthetic Treatments | Regen Health Physicians",
+    title: "Chronic Disease Management | Regen Health Physicians",
     description:
-      "Regenerative aesthetic medicine that works at the cellular level — stem cell, PRP, and peptide protocols. Physician-led, concierge-delivered.",
+      "Root-cause regenerative care for autoimmune, metabolic, and chronic inflammatory conditions.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aesthetic Treatments | Regen Health Physicians",
+    title: "Chronic Disease Management | Regen Health Physicians",
     description:
-      "Regenerative aesthetic medicine that works at the cellular level.",
+      "Root-cause regenerative care for chronic conditions.",
     images: ["/images/og-image.jpg"],
   },
   alternates: {
-    canonical: `${siteUrl}/aesthetics`,
+    canonical: `${siteUrl}/chronic-disease`,
   },
 };
 
-const treatments = [
+const conditions = [
   {
-    tag: "Treatment 01",
-    title: "Stem Cell Therapy for Skin Rejuvenation",
-    tagline: "The pinnacle of regenerative aesthetics.",
-    body: "Stem cell therapy represents the frontier of modern aesthetic medicine. Rather than masking the signs of aging, stem cell treatments signal your skin to regenerate — activating dormant repair mechanisms and restoring the conditions of younger, healthier tissue.",
+    tag: "Focus 01",
+    title: "Autoimmune Conditions",
+    tagline: "Calm the system. Restore the signal.",
+    body: "Autoimmune disease is a signal problem — the immune system attacking the body's own tissue. Our protocols combine regenerative therapies, peptides, and functional medicine to reduce inflammation, modulate immune signaling, and support tissue repair where damage has already occurred.",
     bullets: [
-      "Deep structural collagen rebuilding",
-      "Reduction of fine lines, wrinkles, and skin laxity",
-      "Evening of skin tone and texture at the cellular level",
-      "Restoration of volume and elasticity without synthetic fillers",
-      "Accelerated healing and skin renewal",
+      "Lupus and rheumatoid arthritis support",
+      "Crohn's, ulcerative colitis, and gut-driven autoimmunity",
+      "Hashimoto's and thyroid-related autoimmunity",
+      "Psoriasis and inflammatory skin conditions",
+      "Adjunct care alongside your rheumatologist or specialist",
     ],
     footnote:
-      "Stem cell therapy works progressively, with results that deepen over weeks and months as your biology responds.",
-    location: "Available in Salt Lake City and New York City.",
-    cta: "Request a Stem Cell Consultation",
-    image: "/images/aesthetics/treatment-1.jpeg",
-    imageAlt: "Serene woman with luminous skin — stem cell rejuvenation",
+      "We work in coordination with your specialists — not in place of them. Our role is the regenerative and functional layer most clinics do not provide.",
+    cta: "Discuss an Autoimmune Plan",
+    image: "/images/chronic-disease/autoimmune.jpeg",
+    imageAlt: "Clinical chart, eyeglasses, and glass of water — autoimmune care",
   },
   {
-    tag: "Treatment 02",
-    title: "PRP — Platelet-Rich Plasma",
-    tagline: "Your body's own power, amplified.",
-    body: "Platelet-Rich Plasma therapy harnesses the regenerative compounds already present in your blood — concentrated and delivered precisely where your skin needs renewal most. Because PRP is derived from your own biology, it works in harmony with your body rather than introducing foreign substances.",
+    tag: "Focus 02",
+    title: "Chronic Fatigue & Long COVID",
+    tagline: "Energy at the cellular level.",
+    body: "Chronic fatigue and post-viral syndromes share a common root: damaged mitochondria, persistent inflammation, and disrupted recovery signaling. Our protocols target mitochondrial function, immune regulation, and nervous system recovery — using peptides, IV therapies, and regenerative tools where indicated.",
     bullets: [
-      "Fine lines and surface wrinkles",
-      "Skin texture, tone, and luminosity",
-      "Under-eye hollowing and discoloration",
-      "Collagen stimulation for lasting firmness",
-      "Scalp and hairline rejuvenation",
+      "Mitochondrial energy support",
+      "Post-viral and long COVID protocols",
+      "Sleep and nervous system regulation",
+      "Cognitive fog and brain energy",
+      "Phased return to activity and exercise tolerance",
     ],
     footnote:
-      "PRP is frequently combined with our stem cell or peptide protocols for a compounding regenerative effect.",
-    cta: "Build Your PRP Protocol",
-    image: "/images/aesthetics/treatment-2.jpeg",
-    imageAlt: "Golden plasma droplet — PRP therapy",
+      "Recovery from chronic fatigue is non-linear. Our concierge model means continuous adjustment — not a one-visit fix.",
+    cta: "Build a Recovery Plan",
+    image: "/images/chronic-disease/fatigue.jpeg",
+    imageAlt: "Steaming mug in soft morning light — chronic fatigue and long COVID",
   },
   {
-    tag: "Treatment 03",
-    title: "Peptide Treatments",
-    tagline: "Precision signals for youthful skin.",
-    body: "Peptides are the messengers your skin uses to communicate, repair, and renew. As we age, these signals weaken — and so does the skin's ability to respond to them. Peptide therapy restores that communication, instructing your skin to produce collagen, retain moisture, and behave the way younger skin does.",
+    tag: "Focus 03",
+    title: "Metabolic Disease & Insulin Resistance",
+    tagline: "Reverse the trajectory, not just the number.",
+    body: "Metabolic disease is the upstream driver behind much of modern chronic illness — cardiovascular disease, dementia, fatty liver, and accelerated aging. We treat the biology, not just the lab value, with integrated care across peptides, GLP-1 protocols, lifestyle medicine, and continuous monitoring.",
     bullets: [
-      "Collagen and elastin production",
-      "Skin hydration and barrier restoration",
-      "Reduction of fine lines and surface aging",
-      "Brightening and tone correction",
-      "Long-term skin quality and resilience",
+      "Pre-diabetes and type 2 diabetes management",
+      "Insulin resistance reversal protocols",
+      "Visceral fat and body composition",
+      "Cardiometabolic risk reduction",
+      "Continuous glucose monitoring and lab tracking",
     ],
     footnote:
-      "Clinical-grade compounds prescribed and administered by our medical team.",
-    cta: "Explore Your Peptide Protocol",
-    image: "/images/aesthetics/treatment-3.jpeg",
-    imageAlt: "Blue serum vial on marble — peptide protocol",
+      "Outcomes are tracked across labs, body composition, and CGM data — adjusted continuously across the program.",
+    cta: "Build a Metabolic Plan",
+    image: "/images/chronic-disease/metabolic.jpeg",
+    imageAlt: "Whole foods overhead — metabolic disease and insulin resistance",
+  },
+  {
+    tag: "Focus 04",
+    title: "Chronic Inflammation & Pain",
+    tagline: "Treat the signal driving the pain.",
+    body: "Chronic pain that persists past tissue healing is an inflammatory and nervous-system problem. We address it where it lives — combining regenerative biologics, peptide protocols, and targeted lifestyle medicine to reduce systemic inflammation and restore function.",
+    bullets: [
+      "Persistent musculoskeletal pain",
+      "Post-injury and post-surgical pain syndromes",
+      "Inflammatory pain from autoimmune disease",
+      "Nerve pain and neuropathy support",
+      "Coordination with our orthopedic and regenerative protocols",
+    ],
+    footnote:
+      "When indicated, paired with our regenerative orthopedic and PRP protocols for tissue-level care.",
+    cta: "Discuss Pain & Inflammation",
+    image: "/images/chronic-disease/pain.jpeg",
+    imageAlt: "Hands wrapped around warm cup — chronic inflammation and pain",
+  },
+];
+
+const approach = [
+  {
+    title: "Comprehensive Assessment",
+    body: "Detailed history, advanced labs, biomarkers, and imaging where indicated. We map the biology before we recommend the protocol.",
+  },
+  {
+    title: "Individualized Protocol",
+    body: "A plan built around your labs, your timeline, and your other care. No template medicine.",
+  },
+  {
+    title: "Regenerative Layer",
+    body: "Peptides, biologic therapies, IV protocols, and stem cell or PRP where indicated — integrated into the broader plan.",
+  },
+  {
+    title: "Continuous Adjustment",
+    body: "Concierge follow-up, periodic re-evaluation, and ongoing protocol refinement as your biology responds.",
   },
 ];
 
 const whyPoints = [
-  "Every aesthetic protocol is designed and overseen by our medical team — not aestheticians, not sales staff",
-  "We use only clinical-grade, rigorously sourced compounds and biologics",
-  "Treatments available across Salt Lake City and New York City locations",
-  "Regenerative approach means results that compound — not treatments you repeat endlessly just to maintain a baseline",
-  "Concierge-level care from first consultation through every follow-up",
+  "Physician-led care that integrates with — not replaces — your existing specialists",
+  "Access to regenerative tools (peptides, biologics, PRP, stem cell) most chronic-disease clinics do not offer",
+  "Lab-driven protocols with continuous tracking and adjustment",
+  "Concierge access for the long, non-linear arc of chronic illness",
+  "Two clinical homes — Salt Lake City and New York City — with virtual continuity in between",
 ];
 
 const testimonials = [
   {
     quote:
-      "I've done everything — fillers, lasers, the works. Nothing has come close to what I experienced at Regen Health. My skin looks the way it did ten years ago, and it keeps getting better.",
-    location: "New York City",
-    prompt:
-      "Warm black-and-white portrait of a confident woman in her 50s, soft studio light, timeless elegance, square crop",
-  },
-  {
-    quote:
-      "The stem cell treatment was unlike anything I'd tried before. Three months in and people keep asking what I'm doing differently. I tell them — everything.",
+      "I had been managing Hashimoto's for years and accepted a baseline of fatigue. Six months into the protocol, my labs are the best they have been and I have my energy back.",
     location: "Salt Lake City",
     prompt:
-      "Natural-light headshot of a woman smiling softly outdoors, muted background, editorial portrait, square crop",
+      "Natural-light portrait of a woman in her 40s with calm confident expression, neutral backdrop, square editorial crop",
   },
   {
     quote:
-      "I was skeptical about peptides until I saw the results. My skin is firmer, clearer, and more hydrated than it's been in years. It actually feels healthy.",
+      "Long COVID took eighteen months from me. The team built a plan that finally moved the needle — sleep, energy, cognition. The continuity of care made the difference.",
     location: "New York City",
     prompt:
-      "Close-up portrait of a woman with radiant skin, gentle side lighting, cream backdrop, editorial minimalism, square crop",
+      "Black-and-white portrait of a man in his 40s, soft natural light, calm and grounded, editorial square crop",
+  },
+  {
+    quote:
+      "My A1C, weight, and inflammatory markers all moved within a few months. More importantly, I understood what was happening and why. That changed everything.",
+    location: "New York City",
+    prompt:
+      "Warm portrait of a woman in her 50s smiling subtly, soft light, muted background, editorial square crop",
   },
 ];
 
 const faqs = [
   {
-    q: "Are these treatments safe?",
-    a: "All Regen Health aesthetic protocols are physician-designed and administered under medical supervision. Stem cell therapy, PRP, and peptide treatments have well-established safety profiles when conducted in a clinical setting with properly sourced compounds — which is the only standard we operate to.",
+    q: "Will you replace my current specialist?",
+    a: "No. We integrate with your existing care team — rheumatologist, endocrinologist, neurologist, and others. Our role is the regenerative and functional layer that complements their work.",
   },
   {
-    q: "How soon will I see results?",
-    a: "PRP patients often notice improved luminosity and texture within 2–4 weeks. Peptide protocols show progressive results over 4–8 weeks. Stem cell therapy produces results that deepen over 3–6 months as your biology responds — the most dramatic outcomes typically emerge at the 90-day mark.",
+    q: "How is this different from a typical functional medicine clinic?",
+    a: "We are physician-led and combine functional medicine with access to regenerative therapies — peptides, PRP, stem cell protocols, and biologics — alongside continuous lab tracking and concierge oversight. The depth of clinical access is the difference.",
   },
   {
-    q: "Can these treatments be combined?",
-    a: "Yes — and they are most powerful when combined. Our physicians frequently design layered protocols that use stem cell therapy, PRP, and peptides in sequence for compounding regenerative results.",
+    q: "How long do programs run?",
+    a: "Chronic disease care is a long arc. Initial protocols typically run 3–6 months with periodic re-evaluation; many patients continue in maintenance care for years. Concierge access means ongoing adjustment, not episodic visits.",
+  },
+  {
+    q: "Are these therapies safe alongside my current medications?",
+    a: "All protocols are designed by physicians with full review of your current medications, conditions, and care plan. We coordinate with your specialists and adjust accordingly.",
   },
   {
     q: "Do I need to visit in person?",
-    a: "An initial consultation can be conducted virtually. Treatment requires an in-person visit at our Salt Lake City or New York City location.",
+    a: "Initial consultations and most follow-ups can be conducted virtually. Some treatments, labs, and assessments require an in-person visit at our Salt Lake City or New York City location.",
   },
   {
     q: "How do I get started?",
-    a: "Request your custom treatment plan using the button below. Our medical team will review your goals and reach out to schedule your consultation.",
+    a: "Request a private consultation using the button below. Our medical team will review your history, order baseline labs where appropriate, and outline a plan built around your specific condition and goals.",
   },
 ];
 
-export default function AestheticsPage() {
+export default function ChronicDiseasePage() {
   return (
     <>
       <Header />
@@ -159,32 +199,31 @@ export default function AestheticsPage() {
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
               <FadeUp>
                 <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                  Aesthetic Treatments
+                  Chronic Disease Management
                 </span>
                 <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
-                  Where regenerative science meets{" "}
-                  <span className="text-blue-900">timeless beauty.</span>
+                  Root-cause medicine for{" "}
+                  <span className="text-blue-900">chronic conditions.</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:leading-[1.6]">
-                  The most advanced aesthetic medicine today doesn&apos;t just
-                  treat the surface — it works at the cellular level, restoring
-                  your skin&apos;s ability to renew itself from within. Our
-                  protocols are built on the same regenerative science used in
-                  elite longevity and performance medicine. The result is skin
-                  that doesn&apos;t just look younger — it genuinely is.
+                  Most chronic disease care manages symptoms. We work upstream
+                  — combining regenerative therapies, peptides, and functional
+                  medicine to address the inflammation, signaling, and cellular
+                  dysfunction that drive autoimmune, metabolic, and post-viral
+                  conditions.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href={BOOKING_URL}
                     className="rounded-full bg-blue-900 px-7 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-blue-800 hover:shadow-xl"
                   >
-                    Request Your Custom Plan
+                    Request a Private Consultation
                   </Link>
                   <Link
-                    href="#treatments"
+                    href="#conditions"
                     className="rounded-full border border-gray-300 px-7 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-gray-700 transition-all hover:border-blue-900/30 hover:text-blue-900"
                   >
-                    Explore Treatments
+                    Conditions We Treat
                   </Link>
                 </div>
               </FadeUp>
@@ -192,8 +231,8 @@ export default function AestheticsPage() {
               <FadeIn>
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/aesthetics/hero.jpeg"
-                    alt="Woman with radiant, luminous skin"
+                    src="/images/chronic-disease/hero.jpeg"
+                    alt="Physician in conversation with a patient"
                     fill
                     priority
                     className="object-cover"
@@ -204,15 +243,15 @@ export default function AestheticsPage() {
           </div>
         </section>
 
-        {/* The Regen Aesthetics Difference */}
+        {/* The Difference */}
         <section className="bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
               <FadeIn>
                 <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/aesthetics/difference.jpeg"
-                    alt="Collagen fibers — regenerative biology visualization"
+                    src="/images/chronic-disease/difference.jpeg"
+                    alt="Immune cells and signaling pathways visualization"
                     fill
                     className="object-cover"
                   />
@@ -224,52 +263,50 @@ export default function AestheticsPage() {
                   The Difference
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  The Regen Aesthetics Difference
+                  Beyond symptom management.
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
-                  Most aesthetic clinics offer the same menu of injectables you
-                  can find anywhere. We go further.
+                  Chronic disease care is too often reactive — a prescription
+                  for the latest flare, an adjustment when the labs drift. We
+                  work upstream of the symptom, on the biology that drives it.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
-                  Our protocols begin with regenerative biology — the science
-                  of how your cells communicate, repair, and rebuild. We pair
-                  that foundation with the most advanced aesthetic treatments
-                  available, creating outcomes that conventional med-spas simply
-                  cannot replicate.
+                  Our protocols pair regenerative biologics and peptides with
+                  rigorous lab tracking, functional medicine, and continuous
+                  physician oversight. The goal is durable change — not
+                  endless management.
                 </p>
                 <p className="mt-4 text-sm font-medium text-gray-900 sm:text-base">
-                  Every patient receives a comprehensive aesthetic assessment
-                  before any treatment is recommended. Your skin, your biology,
-                  your goals — your plan.
+                  Your conditions, your biology, your protocol.
                 </p>
               </FadeUp>
             </div>
           </div>
         </section>
 
-        {/* Treatments */}
-        <section id="treatments" className="bg-stone-50 py-20 sm:py-28">
+        {/* Conditions */}
+        <section id="conditions" className="bg-stone-50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeUp className="mx-auto max-w-2xl text-center">
               <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                Our Treatments
+                Conditions We Treat
               </span>
               <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Three Protocols. Compounding Results.
+                Where Regenerative Care Changes the Trajectory.
               </h2>
             </FadeUp>
 
             <div className="mt-16 space-y-24">
-              {treatments.map((t, i) => (
+              {conditions.map((c, i) => (
                 <div
-                  key={t.title}
+                  key={c.title}
                   className={`grid items-center gap-12 lg:grid-cols-2 lg:gap-20 ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}
                 >
                   <FadeIn>
                     <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
                       <Image
-                        src={t.image}
-                        alt={t.imageAlt}
+                        src={c.image}
+                        alt={c.imageAlt}
                         fill
                         className="object-cover"
                       />
@@ -278,19 +315,19 @@ export default function AestheticsPage() {
 
                   <FadeUp>
                     <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                      {t.tag}
+                      {c.tag}
                     </span>
                     <h3 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                      {t.title}
+                      {c.title}
                     </h3>
                     <p className="mt-4 text-base font-medium italic text-blue-900 sm:text-lg">
-                      {t.tagline}
+                      {c.tagline}
                     </p>
                     <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
-                      {t.body}
+                      {c.body}
                     </p>
                     <ul className="mt-6 space-y-2.5">
-                      {t.bullets.map((b) => (
+                      {c.bullets.map((b) => (
                         <li key={b} className="flex items-start gap-3">
                           <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-900" />
                           <span className="text-sm leading-relaxed text-gray-700 sm:text-base">
@@ -300,18 +337,13 @@ export default function AestheticsPage() {
                       ))}
                     </ul>
                     <p className="mt-6 text-sm leading-relaxed text-gray-600 sm:text-base">
-                      {t.footnote}
+                      {c.footnote}
                     </p>
-                    {t.location && (
-                      <p className="mt-2 text-xs italic text-gray-500">
-                        {t.location}
-                      </p>
-                    )}
                     <Link
                       href={BOOKING_URL}
                       className="mt-8 inline-flex items-center gap-2 rounded-full border border-blue-900 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-blue-900 transition-all hover:bg-blue-900 hover:text-white"
                     >
-                      {t.cta}
+                      {c.cta}
                       <svg
                         className="h-4 w-4"
                         fill="none"
@@ -334,8 +366,40 @@ export default function AestheticsPage() {
           </div>
         </section>
 
-        {/* Why Regen Health */}
+        {/* Our Approach */}
         <section className="bg-white py-20 sm:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <FadeUp className="mx-auto max-w-2xl text-center">
+              <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
+                Our Approach
+              </span>
+              <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Four Phases. One Continuous Relationship.
+              </h2>
+            </FadeUp>
+
+            <StaggerContainer className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {approach.map((a, i) => (
+                <StaggerItem key={a.title}>
+                  <div className="h-full rounded-2xl border border-gray-200 bg-stone-50 p-6 transition-colors hover:border-blue-200 hover:bg-blue-50/40">
+                    <span className="font-mono text-xs font-semibold tabular-nums text-blue-900/60">
+                      0{i + 1}
+                    </span>
+                    <h3 className="mt-3 font-heading text-lg font-semibold text-gray-900">
+                      {a.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                      {a.body}
+                    </p>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          </div>
+        </section>
+
+        {/* Why Regen Health */}
+        <section className="bg-stone-50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
               <FadeUp>
@@ -343,14 +407,14 @@ export default function AestheticsPage() {
                   Why Regen Health
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                  Physician-led. Evidence-based. Results-obsessed.
+                  Physician-led. Integrative. Continuous.
                 </h2>
               </FadeUp>
 
               <StaggerContainer className="space-y-4">
                 {whyPoints.map((p, i) => (
                   <StaggerItem key={p}>
-                    <div className="flex gap-4 rounded-2xl border border-gray-200 bg-stone-50 p-5 transition-colors hover:border-blue-200 hover:bg-blue-50/40">
+                    <div className="flex gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition-colors hover:border-blue-200 hover:bg-blue-50/40">
                       <span className="shrink-0 font-mono text-xs font-semibold tabular-nums text-blue-900/60">
                         0{i + 1}
                       </span>
@@ -366,7 +430,7 @@ export default function AestheticsPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="bg-stone-50 py-20 sm:py-28">
+        <section className="bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeUp className="mx-auto max-w-2xl text-center">
               <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
@@ -380,7 +444,7 @@ export default function AestheticsPage() {
             <StaggerContainer className="mt-12 grid gap-6 lg:grid-cols-3">
               {testimonials.map((t, i) => (
                 <StaggerItem key={i}>
-                  <div className="flex h-full flex-col justify-between rounded-2xl border border-gray-100 bg-white p-8 transition-shadow hover:shadow-lg">
+                  <div className="flex h-full flex-col justify-between rounded-2xl border border-gray-100 bg-stone-50 p-8 transition-shadow hover:shadow-lg">
                     <div>
                       <svg
                         className="h-7 w-7 text-blue-200"
@@ -412,29 +476,28 @@ export default function AestheticsPage() {
           </div>
         </section>
 
-        {/* Your Skin Reimagined CTA */}
+        {/* Final CTA */}
         <section className="bg-blue-950 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
               <FadeUp>
                 <span className="text-xs font-semibold uppercase tracking-widest text-blue-300">
-                  Your Skin. Reimagined.
+                  Change the Trajectory
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                  Not chasing youth. Restoring what is genuinely yours.
+                  A different standard for chronic disease care.
                 </h2>
                 <p className="mt-6 max-w-lg text-base leading-relaxed text-blue-200/70 sm:text-lg">
-                  The vitality, clarity, and confidence that come from skin
-                  that is functioning the way it was designed to. If you are
-                  ready to experience regenerative aesthetics at the highest
-                  level, we are ready to build your plan.
+                  If you are ready for an integrative, regenerative approach to
+                  the condition you have been managing — designed by physicians
+                  who track outcomes — we are ready to build your plan.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href={BOOKING_URL}
                     className="rounded-full bg-white px-8 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-blue-950 transition-all hover:bg-blue-50 hover:shadow-xl"
                   >
-                    Request Your Custom Plan
+                    Request a Private Consultation
                   </Link>
                   <Link
                     href={BOOKING_URL}
@@ -452,8 +515,8 @@ export default function AestheticsPage() {
               <FadeIn>
                 <div className="relative aspect-square overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/aesthetics/skin-reimagined.jpeg"
-                    alt="Luminous skin — regenerative aesthetics"
+                    src="/images/chronic-disease/cta.jpeg"
+                    alt="Patient chart and stethoscope still life"
                     fill
                     className="object-cover"
                   />
@@ -513,7 +576,7 @@ export default function AestheticsPage() {
                 href={BOOKING_URL}
                 className="inline-flex items-center gap-2 rounded-full bg-blue-900 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-blue-800 hover:shadow-xl"
               >
-                Request Your Custom Treatment Plan
+                Request a Private Consultation
                 <svg
                   className="h-4 w-4"
                   fill="none"

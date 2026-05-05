@@ -46,8 +46,13 @@ const sections: NavSection[] = [
       },
       {
         label: "Peptides",
-        href: "#services",
+        href: "/peptides",
         description: "Precision peptide protocols.",
+      },
+      {
+        label: "Chronic Disease",
+        href: "/chronic-disease",
+        description: "Root-cause regenerative care.",
       },
     ],
   },

@@ -10,145 +10,184 @@ import { BOOKING_URL } from "@/lib/constants";
 const siteUrl = "https://rhpny.com";
 
 export const metadata: Metadata = {
-  title: "Aesthetic Treatments | Regenerative Skin Medicine",
+  title: "Peptide Therapy | Precision Protocols for Recovery, Longevity & Performance",
   description:
-    "Physician-led regenerative aesthetic treatments at Regen Health. Stem cell therapy, PRP, and peptide protocols for collagen rebuilding, skin renewal, and compounding long-term results. NYC & Salt Lake City.",
+    "Physician-prescribed peptide protocols at Regen Health. Clinical-grade peptides for recovery, longevity, metabolic health, cognition, hair, and aesthetics. NYC & Salt Lake City.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: `${siteUrl}/aesthetics`,
+    url: `${siteUrl}/peptides`,
     siteName: "Regen Health Physicians",
-    title: "Aesthetic Treatments | Regen Health Physicians",
+    title: "Peptide Therapy | Regen Health Physicians",
     description:
-      "Regenerative aesthetic medicine that works at the cellular level — stem cell, PRP, and peptide protocols. Physician-led, concierge-delivered.",
+      "Clinical-grade peptide protocols designed and overseen by physicians. Recovery, longevity, performance.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aesthetic Treatments | Regen Health Physicians",
+    title: "Peptide Therapy | Regen Health Physicians",
     description:
-      "Regenerative aesthetic medicine that works at the cellular level.",
+      "Clinical-grade peptide protocols designed and overseen by physicians.",
     images: ["/images/og-image.jpg"],
   },
   alternates: {
-    canonical: `${siteUrl}/aesthetics`,
+    canonical: `${siteUrl}/peptides`,
   },
 };
 
-const treatments = [
+const protocols = [
   {
-    tag: "Treatment 01",
-    title: "Stem Cell Therapy for Skin Rejuvenation",
-    tagline: "The pinnacle of regenerative aesthetics.",
-    body: "Stem cell therapy represents the frontier of modern aesthetic medicine. Rather than masking the signs of aging, stem cell treatments signal your skin to regenerate — activating dormant repair mechanisms and restoring the conditions of younger, healthier tissue.",
+    tag: "Protocol 01",
+    title: "Recovery & Tissue Repair",
+    tagline: "Healing signals, amplified.",
+    body: "Recovery peptides instruct the body to accelerate tissue repair, reduce inflammation, and restore connective integrity. Used by elite athletes and post-surgical patients to compress recovery timelines and rebuild stronger.",
     bullets: [
-      "Deep structural collagen rebuilding",
-      "Reduction of fine lines, wrinkles, and skin laxity",
-      "Evening of skin tone and texture at the cellular level",
-      "Restoration of volume and elasticity without synthetic fillers",
-      "Accelerated healing and skin renewal",
+      "Soft-tissue and tendon repair support",
+      "Reduced post-injury and post-surgical inflammation",
+      "Joint and ligament resilience",
+      "Gut lining and mucosal healing",
+      "Nerve regeneration support",
     ],
     footnote:
-      "Stem cell therapy works progressively, with results that deepen over weeks and months as your biology responds.",
-    location: "Available in Salt Lake City and New York City.",
-    cta: "Request a Stem Cell Consultation",
-    image: "/images/aesthetics/treatment-1.jpeg",
-    imageAlt: "Serene woman with luminous skin — stem cell rejuvenation",
+      "Often layered with PRP or stem cell protocols for compounding regenerative effect.",
+    cta: "Build Your Recovery Protocol",
+    image: "/images/peptides/recovery.jpeg",
+    imageAlt: "Runner mid-stride in golden light — recovery and tissue repair",
   },
   {
-    tag: "Treatment 02",
-    title: "PRP — Platelet-Rich Plasma",
-    tagline: "Your body's own power, amplified.",
-    body: "Platelet-Rich Plasma therapy harnesses the regenerative compounds already present in your blood — concentrated and delivered precisely where your skin needs renewal most. Because PRP is derived from your own biology, it works in harmony with your body rather than introducing foreign substances.",
+    tag: "Protocol 02",
+    title: "Longevity & Cognition",
+    tagline: "Slow the clock at the cellular level.",
+    body: "Longevity peptides target the upstream drivers of biological aging — mitochondrial function, autophagy, growth hormone signaling, and neuroplasticity. The result is sharper cognition, deeper sleep, and measurably better biomarkers over time.",
     bullets: [
-      "Fine lines and surface wrinkles",
-      "Skin texture, tone, and luminosity",
-      "Under-eye hollowing and discoloration",
-      "Collagen stimulation for lasting firmness",
-      "Scalp and hairline rejuvenation",
+      "Mitochondrial energy production",
+      "Cognitive performance and focus",
+      "Deeper sleep and recovery cycles",
+      "Cellular repair and autophagy",
+      "Neuroprotective signaling",
     ],
     footnote:
-      "PRP is frequently combined with our stem cell or peptide protocols for a compounding regenerative effect.",
-    cta: "Build Your PRP Protocol",
-    image: "/images/aesthetics/treatment-2.jpeg",
-    imageAlt: "Golden plasma droplet — PRP therapy",
+      "Protocols are dosed and titrated to your bloodwork, biomarkers, and goals.",
+    cta: "Explore Longevity Peptides",
+    image: "/images/peptides/longevity.jpeg",
+    imageAlt: "Luminous peptide vial on dark slate — longevity and cognition",
   },
   {
-    tag: "Treatment 03",
-    title: "Peptide Treatments",
-    tagline: "Precision signals for youthful skin.",
-    body: "Peptides are the messengers your skin uses to communicate, repair, and renew. As we age, these signals weaken — and so does the skin's ability to respond to them. Peptide therapy restores that communication, instructing your skin to produce collagen, retain moisture, and behave the way younger skin does.",
+    tag: "Protocol 03",
+    title: "Metabolic & Body Composition",
+    tagline: "Rewire how your body burns and builds.",
+    body: "Metabolic peptides — including growth hormone secretagogues and GLP-1 class compounds — restore the hormonal signals that govern fat oxidation, lean muscle, insulin sensitivity, and recovery. Built around your labs, not a one-size-fits-all menu.",
+    bullets: [
+      "Visceral fat reduction",
+      "Lean muscle preservation and growth",
+      "Insulin sensitivity and glycemic control",
+      "Sleep architecture and recovery",
+      "Energy and endurance",
+    ],
+    footnote:
+      "All metabolic protocols include lab tracking, periodic re-evaluation, and concierge clinical support.",
+    cta: "Build Your Metabolic Protocol",
+    image: "/images/peptides/metabolic.jpeg",
+    imageAlt: "Fresh whole foods and training gear — metabolic and body composition",
+  },
+  {
+    tag: "Protocol 04",
+    title: "Skin, Hair & Aesthetic Peptides",
+    tagline: "Programmable signals for visible renewal.",
+    body: "Aesthetic peptides drive collagen synthesis, follicle activation, and barrier restoration. They work as standalone protocols or as precision amplifiers alongside our PRP and stem cell aesthetic offerings.",
     bullets: [
       "Collagen and elastin production",
-      "Skin hydration and barrier restoration",
-      "Reduction of fine lines and surface aging",
+      "Follicle stimulation for hair density",
+      "Skin hydration and barrier repair",
       "Brightening and tone correction",
       "Long-term skin quality and resilience",
     ],
     footnote:
-      "Clinical-grade compounds prescribed and administered by our medical team.",
-    cta: "Explore Your Peptide Protocol",
-    image: "/images/aesthetics/treatment-3.jpeg",
-    imageAlt: "Blue serum vial on marble — peptide protocol",
+      "Frequently paired with our regenerative aesthetic treatments for compounding results.",
+    cta: "Pair With Aesthetic Care",
+    image: "/images/peptides/skin-hair.jpeg",
+    imageAlt: "Woman with luminous skin — skin, hair, and aesthetic peptides",
+  },
+  {
+    tag: "Protocol 05",
+    title: "Sexual & Hormonal Health",
+    tagline: "Restore the signals behind vitality.",
+    body: "Targeted peptides support libido, hormonal balance, and sexual function for both men and women. Designed alongside hormone optimization where indicated, and always under physician supervision.",
+    bullets: [
+      "Libido and arousal support",
+      "Hormonal axis modulation",
+      "Energy and mood",
+      "Sleep and recovery",
+      "Adjunct to hormone optimization where indicated",
+    ],
+    footnote:
+      "Care is integrated with our concierge longevity and hormone programs.",
+    cta: "Discuss Hormonal Peptides Privately",
+    image: "/images/peptides/sexual-hormonal.jpeg",
+    imageAlt: "Couple in warm light — sexual and hormonal health",
   },
 ];
 
 const whyPoints = [
-  "Every aesthetic protocol is designed and overseen by our medical team — not aestheticians, not sales staff",
-  "We use only clinical-grade, rigorously sourced compounds and biologics",
-  "Treatments available across Salt Lake City and New York City locations",
-  "Regenerative approach means results that compound — not treatments you repeat endlessly just to maintain a baseline",
-  "Concierge-level care from first consultation through every follow-up",
+  "Every peptide protocol is physician-designed and overseen — not sold by a clinic counter",
+  "We use only clinical-grade, properly sourced compounds from licensed compounding pharmacies",
+  "Protocols are titrated to your bloodwork, biomarkers, and goals — not generic dosing",
+  "Available across our Salt Lake City and New York City locations, with virtual follow-ups",
+  "Concierge-level support from first consultation through every cycle and re-evaluation",
 ];
 
 const testimonials = [
   {
     quote:
-      "I've done everything — fillers, lasers, the works. Nothing has come close to what I experienced at Regen Health. My skin looks the way it did ten years ago, and it keeps getting better.",
+      "I was skeptical until I ran my own labs. Six weeks in, the markers moved. My recovery between training sessions is the best it has been in a decade.",
     location: "New York City",
     prompt:
-      "Warm black-and-white portrait of a confident woman in her 50s, soft studio light, timeless elegance, square crop",
+      "Black-and-white portrait of a fit man in his 40s, soft studio light, athletic editorial portrait, square crop",
   },
   {
     quote:
-      "The stem cell treatment was unlike anything I'd tried before. Three months in and people keep asking what I'm doing differently. I tell them — everything.",
+      "Sleep, focus, mood — all shifted within the first month. The team explained the why behind every compound. It felt like real medicine, not a wellness pitch.",
     location: "Salt Lake City",
     prompt:
-      "Natural-light headshot of a woman smiling softly outdoors, muted background, editorial portrait, square crop",
+      "Natural-light portrait of a woman in her late 30s smiling subtly, neutral background, square editorial crop",
   },
   {
     quote:
-      "I was skeptical about peptides until I saw the results. My skin is firmer, clearer, and more hydrated than it's been in years. It actually feels healthy.",
+      "I came in for recovery support after surgery. I left with a longevity plan I actually trust. Most thoughtful medical experience I've had.",
     location: "New York City",
     prompt:
-      "Close-up portrait of a woman with radiant skin, gentle side lighting, cream backdrop, editorial minimalism, square crop",
+      "Warm natural-light portrait of a man in his 50s, calm expression, muted backdrop, editorial square crop",
   },
 ];
 
 const faqs = [
   {
-    q: "Are these treatments safe?",
-    a: "All Regen Health aesthetic protocols are physician-designed and administered under medical supervision. Stem cell therapy, PRP, and peptide treatments have well-established safety profiles when conducted in a clinical setting with properly sourced compounds — which is the only standard we operate to.",
+    q: "Are peptides safe?",
+    a: "All Regen Health peptide protocols are physician-designed, prescribed, and monitored. We use only clinical-grade compounds from licensed compounding pharmacies and titrate dosing to your individual biology and labs.",
   },
   {
     q: "How soon will I see results?",
-    a: "PRP patients often notice improved luminosity and texture within 2–4 weeks. Peptide protocols show progressive results over 4–8 weeks. Stem cell therapy produces results that deepen over 3–6 months as your biology responds — the most dramatic outcomes typically emerge at the 90-day mark.",
+    a: "Recovery and sleep effects are often felt within 2–4 weeks. Body-composition, metabolic, and longevity markers shift progressively over 8–16 weeks, with compounding benefit across cycles when paired with lifestyle and lab tracking.",
   },
   {
-    q: "Can these treatments be combined?",
-    a: "Yes — and they are most powerful when combined. Our physicians frequently design layered protocols that use stem cell therapy, PRP, and peptides in sequence for compounding regenerative results.",
+    q: "Are peptides legal?",
+    a: "The peptides we prescribe are dispensed by licensed U.S. compounding pharmacies under physician prescription. Regulatory frameworks evolve — your physician will discuss current status, sourcing, and what is appropriate for your situation.",
+  },
+  {
+    q: "Can peptides be combined with stem cells, PRP, or hormone therapy?",
+    a: "Yes. Our physicians frequently design layered protocols that combine peptides with regenerative therapies and hormone optimization for compounding effect. Combinations are always evaluated for safety and synergy.",
   },
   {
     q: "Do I need to visit in person?",
-    a: "An initial consultation can be conducted virtually. Treatment requires an in-person visit at our Salt Lake City or New York City location.",
+    a: "Initial consultations and most follow-ups can be conducted virtually. Some protocols, labs, or in-office treatments require an in-person visit at our Salt Lake City or New York City location.",
   },
   {
     q: "How do I get started?",
-    a: "Request your custom treatment plan using the button below. Our medical team will review your goals and reach out to schedule your consultation.",
+    a: "Request your custom plan using the button below. Our medical team will review your goals, order baseline labs where appropriate, and design a protocol built specifically for you.",
   },
 ];
 
-export default function AestheticsPage() {
+export default function PeptidesPage() {
   return (
     <>
       <Header />
@@ -159,32 +198,31 @@ export default function AestheticsPage() {
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
               <FadeUp>
                 <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                  Aesthetic Treatments
+                  Peptide Therapy
                 </span>
                 <h1 className="mt-4 font-heading text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
-                  Where regenerative science meets{" "}
-                  <span className="text-blue-900">timeless beauty.</span>
+                  Precision signals.{" "}
+                  <span className="text-blue-900">Programmable biology.</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:leading-[1.6]">
-                  The most advanced aesthetic medicine today doesn&apos;t just
-                  treat the surface — it works at the cellular level, restoring
-                  your skin&apos;s ability to renew itself from within. Our
-                  protocols are built on the same regenerative science used in
-                  elite longevity and performance medicine. The result is skin
-                  that doesn&apos;t just look younger — it genuinely is.
+                  Peptides are the messengers your body uses to repair, recover,
+                  and regenerate. Our physician-formulated protocols restore
+                  those signals — instructing your biology to perform the way
+                  it was designed to. Clinical-grade compounds, individualized
+                  dosing, concierge-level oversight.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href={BOOKING_URL}
                     className="rounded-full bg-blue-900 px-7 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-blue-800 hover:shadow-xl"
                   >
-                    Request Your Custom Plan
+                    Build Your Peptide Protocol
                   </Link>
                   <Link
-                    href="#treatments"
+                    href="#protocols"
                     className="rounded-full border border-gray-300 px-7 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-gray-700 transition-all hover:border-blue-900/30 hover:text-blue-900"
                   >
-                    Explore Treatments
+                    Explore Protocols
                   </Link>
                 </div>
               </FadeUp>
@@ -192,8 +230,8 @@ export default function AestheticsPage() {
               <FadeIn>
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/aesthetics/hero.jpeg"
-                    alt="Woman with radiant, luminous skin"
+                    src="/images/peptides/hero.jpeg"
+                    alt="Clinical peptide vial on stone surface"
                     fill
                     priority
                     className="object-cover"
@@ -204,15 +242,15 @@ export default function AestheticsPage() {
           </div>
         </section>
 
-        {/* The Regen Aesthetics Difference */}
+        {/* The Difference */}
         <section className="bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
               <FadeIn>
                 <div className="relative aspect-[3/4] overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/aesthetics/difference.jpeg"
-                    alt="Collagen fibers — regenerative biology visualization"
+                    src="/images/peptides/difference.jpeg"
+                    alt="Peptide molecular chains visualization"
                     fill
                     className="object-cover"
                   />
@@ -224,52 +262,50 @@ export default function AestheticsPage() {
                   The Difference
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  The Regen Aesthetics Difference
+                  Not a menu. A protocol.
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
-                  Most aesthetic clinics offer the same menu of injectables you
-                  can find anywhere. We go further.
+                  Most clinics sell peptides off a shelf. We start with your
+                  bloodwork, your biology, and your goals — then design a
+                  protocol around them.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
-                  Our protocols begin with regenerative biology — the science
-                  of how your cells communicate, repair, and rebuild. We pair
-                  that foundation with the most advanced aesthetic treatments
-                  available, creating outcomes that conventional med-spas simply
-                  cannot replicate.
+                  Every compound is physician-prescribed, sourced from licensed
+                  compounding pharmacies, and titrated to a target. Cycles are
+                  monitored, re-evaluated, and adjusted. The standard is
+                  outcomes — not throughput.
                 </p>
                 <p className="mt-4 text-sm font-medium text-gray-900 sm:text-base">
-                  Every patient receives a comprehensive aesthetic assessment
-                  before any treatment is recommended. Your skin, your biology,
-                  your goals — your plan.
+                  Your biology, your biomarkers, your protocol.
                 </p>
               </FadeUp>
             </div>
           </div>
         </section>
 
-        {/* Treatments */}
-        <section id="treatments" className="bg-stone-50 py-20 sm:py-28">
+        {/* Protocols */}
+        <section id="protocols" className="bg-stone-50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <FadeUp className="mx-auto max-w-2xl text-center">
               <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                Our Treatments
+                Our Protocols
               </span>
               <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Three Protocols. Compounding Results.
+                Five Pillars. Compounding Results.
               </h2>
             </FadeUp>
 
             <div className="mt-16 space-y-24">
-              {treatments.map((t, i) => (
+              {protocols.map((p, i) => (
                 <div
-                  key={t.title}
+                  key={p.title}
                   className={`grid items-center gap-12 lg:grid-cols-2 lg:gap-20 ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}
                 >
                   <FadeIn>
                     <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
                       <Image
-                        src={t.image}
-                        alt={t.imageAlt}
+                        src={p.image}
+                        alt={p.imageAlt}
                         fill
                         className="object-cover"
                       />
@@ -278,19 +314,19 @@ export default function AestheticsPage() {
 
                   <FadeUp>
                     <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                      {t.tag}
+                      {p.tag}
                     </span>
                     <h3 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                      {t.title}
+                      {p.title}
                     </h3>
                     <p className="mt-4 text-base font-medium italic text-blue-900 sm:text-lg">
-                      {t.tagline}
+                      {p.tagline}
                     </p>
                     <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
-                      {t.body}
+                      {p.body}
                     </p>
                     <ul className="mt-6 space-y-2.5">
-                      {t.bullets.map((b) => (
+                      {p.bullets.map((b) => (
                         <li key={b} className="flex items-start gap-3">
                           <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-900" />
                           <span className="text-sm leading-relaxed text-gray-700 sm:text-base">
@@ -300,18 +336,13 @@ export default function AestheticsPage() {
                       ))}
                     </ul>
                     <p className="mt-6 text-sm leading-relaxed text-gray-600 sm:text-base">
-                      {t.footnote}
+                      {p.footnote}
                     </p>
-                    {t.location && (
-                      <p className="mt-2 text-xs italic text-gray-500">
-                        {t.location}
-                      </p>
-                    )}
                     <Link
                       href={BOOKING_URL}
                       className="mt-8 inline-flex items-center gap-2 rounded-full border border-blue-900 px-6 py-3 text-sm font-semibold uppercase tracking-wider text-blue-900 transition-all hover:bg-blue-900 hover:text-white"
                     >
-                      {t.cta}
+                      {p.cta}
                       <svg
                         className="h-4 w-4"
                         fill="none"
@@ -343,7 +374,7 @@ export default function AestheticsPage() {
                   Why Regen Health
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                  Physician-led. Evidence-based. Results-obsessed.
+                  Physician-led. Lab-driven. Built around you.
                 </h2>
               </FadeUp>
 
@@ -412,29 +443,28 @@ export default function AestheticsPage() {
           </div>
         </section>
 
-        {/* Your Skin Reimagined CTA */}
+        {/* Final CTA */}
         <section className="bg-blue-950 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
               <FadeUp>
                 <span className="text-xs font-semibold uppercase tracking-widest text-blue-300">
-                  Your Skin. Reimagined.
+                  Build Your Protocol
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-                  Not chasing youth. Restoring what is genuinely yours.
+                  Programmed signals. Measurable change.
                 </h2>
                 <p className="mt-6 max-w-lg text-base leading-relaxed text-blue-200/70 sm:text-lg">
-                  The vitality, clarity, and confidence that come from skin
-                  that is functioning the way it was designed to. If you are
-                  ready to experience regenerative aesthetics at the highest
-                  level, we are ready to build your plan.
+                  If you are ready for a peptide protocol designed around your
+                  biology — and overseen by physicians who track results — we
+                  are ready to build it.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href={BOOKING_URL}
                     className="rounded-full bg-white px-8 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-blue-950 transition-all hover:bg-blue-50 hover:shadow-xl"
                   >
-                    Request Your Custom Plan
+                    Build Your Peptide Protocol
                   </Link>
                   <Link
                     href={BOOKING_URL}
@@ -452,8 +482,8 @@ export default function AestheticsPage() {
               <FadeIn>
                 <div className="relative aspect-square overflow-hidden rounded-3xl">
                   <Image
-                    src="/images/aesthetics/skin-reimagined.jpeg"
-                    alt="Luminous skin — regenerative aesthetics"
+                    src="/images/peptides/cta.jpeg"
+                    alt="Peptide vial with halo of light"
                     fill
                     className="object-cover"
                   />
@@ -513,7 +543,7 @@ export default function AestheticsPage() {
                 href={BOOKING_URL}
                 className="inline-flex items-center gap-2 rounded-full bg-blue-900 px-7 py-3.5 text-sm font-semibold uppercase tracking-wider text-white transition-all hover:bg-blue-800 hover:shadow-xl"
               >
-                Request Your Custom Treatment Plan
+                Build Your Peptide Protocol
                 <svg
                   className="h-4 w-4"
                   fill="none"

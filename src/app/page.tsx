@@ -9,6 +9,7 @@ import { CtaSection } from "@/components/cta-section";
 import { Testimonials } from "@/components/testimonials";
 import { Team } from "@/components/team";
 import { Programs } from "@/components/programs";
+import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <Testimonials />
         <Team />
         <Programs />
+        <Faq />
       </main>
       <Footer />
     </>

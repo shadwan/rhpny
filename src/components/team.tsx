@@ -37,6 +37,18 @@ const team: TeamMember[] = [
     image: "/images/team/jhonelle-gravesandy-v2.png",
     bio: "Jhonelle Gravesandy, FNP-BC \u2014 ANCC board-certified Family Nurse Practitioner with over a decade of experience in orthopedics, pain management, functional nutrition, regenerative medicine, and medical aesthetics. Her work blends evidence-based medicine with integrative, longevity-focused therapies to support healing, performance, and aesthetics wellness.",
   },
+  {
+    name: "Irene Kim, PA-C",
+    role: "Physician Assistant",
+    image: "/images/team/irene-kim.jpg",
+    bio: "Most people don\u2019t expect their regenerative medicine clinician to have a neurosurgery background. Irene Kim, PA-C does. Years managing some of the most complex cases in medicine \u2014 traumatic injuries, degenerative disorders, patients who had run out of options \u2014 before bringing that depth to regenerative and aesthetic care. She doesn\u2019t just treat the symptom. She understands the system behind it. That\u2019s exactly the kind of clinician we have on this team. That\u2019s who\u2019s waiting for you at Regen Health Physicians.",
+  },
+  {
+    name: "Debra Moll\u00e9",
+    role: "VP of Patient Advocacy",
+    image: "/images/team/debra-molle.jpg",
+    bio: "15,000+ patients guided. 30+ years of experience. Debra Moll\u00e9 joins Regen Health Physicians as VP of Patient Advocacy, bringing a career spent helping people navigate the most important health decisions of their lives with clarity, compassion, and confidence. Since 2013, she has specialised in regenerative medicine, working alongside physicians and clinical teams to educate patients on advanced stem cell protocols and ensure every individual feels seen, heard, and supported. Her background spans Life Time Fitness, Advocate Good Shepherd Hospital, and Rush Copley Medical Center. She is a member of The American College of Regenerative Medicine (TACRM) and a recipient of the Who\u2019s Who in America award.",
+  },
 ];
 
 function TeamCard({
@@ -207,7 +219,7 @@ export function Team() {
           </h2>
         </FadeUp>
 
-        <FadeUp className="mt-14 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-5">
+        <FadeUp className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-6">
           {team.map((member) => (
             <TeamCard
               key={member.name}

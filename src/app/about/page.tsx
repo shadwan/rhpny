@@ -88,6 +88,30 @@ const team: Member[] = [
       "Lifestyle Integration",
     ],
   },
+  {
+    name: "Irene Kim, PA-C",
+    role: "Physician Assistant",
+    image: "/images/team/irene-kim.jpg",
+    bio: "Most people don’t expect their regenerative medicine clinician to have a neurosurgery background. Irene Kim, PA-C does. Years managing some of the most complex cases in medicine — traumatic injuries, degenerative disorders, patients who had run out of options — before bringing that depth to regenerative and aesthetic care. She doesn’t just treat the symptom. She understands the system behind it. That’s exactly the kind of clinician we have on this team. That’s who’s waiting for you at Regen Health Physicians.",
+    specialties: [
+      "Neurosurgery Background",
+      "Complex Case Management",
+      "Regenerative Medicine",
+      "Aesthetics",
+    ],
+  },
+  {
+    name: "Debra Mollé",
+    role: "VP of Patient Advocacy",
+    image: "/images/team/debra-molle.jpg",
+    bio: "15,000+ patients guided. 30+ years of experience. Debra Mollé joins Regen Health Physicians as VP of Patient Advocacy, bringing a career spent helping people navigate the most important health decisions of their lives with clarity, compassion, and confidence. Since 2013, she has specialised in regenerative medicine, working alongside physicians and clinical teams to educate patients on advanced stem cell protocols and ensure every individual feels seen, heard, and supported. Her background spans Life Time Fitness, Advocate Good Shepherd Hospital, and Rush Copley Medical Center. She is a member of The American College of Regenerative Medicine (TACRM) and a recipient of the Who’s Who in America award.",
+    specialties: [
+      "Patient Advocacy",
+      "Regenerative Medicine Education",
+      "Stem Cell Protocols",
+      "TACRM Member",
+    ],
+  },
 ];
 
 const principles = [

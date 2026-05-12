@@ -39,6 +39,9 @@ type Member = {
   image: string;
   bio: string;
   specialties: string[];
+  phone?: string;
+  phoneHref?: string;
+  calendar?: string;
 };
 
 const team: Member[] = [
@@ -111,6 +114,9 @@ const team: Member[] = [
       "Stem Cell Protocols",
       "TACRM Member",
     ],
+    phone: "+1 (630) 518-0014",
+    phoneHref: "tel:+16305180014",
+    calendar: "https://calendly.com/dmolle-rhpny/30min",
   },
 ];
 
@@ -352,6 +358,65 @@ export default function AboutPage() {
                           ))}
                         </div>
                       </div>
+
+                      {(m.phone || m.calendar) && (
+                        <div className="mt-6 border-t border-gray-100 pt-6">
+                          <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
+                            Direct Contact
+                          </p>
+                          <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
+                            {m.phone && (
+                              <a
+                                href={
+                                  m.phoneHref ??
+                                  `tel:${m.phone.replace(/[^+\d]/g, "")}`
+                                }
+                                className="group inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-800 transition-all hover:border-blue-900 hover:bg-blue-900 hover:text-white"
+                              >
+                                <svg
+                                  className="h-4 w-4 text-blue-900 transition-colors group-hover:text-white"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  strokeWidth={2}
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293a.992.992 0 0 1-1.16.392 13.512 13.512 0 0 1-6.586-6.586.992.992 0 0 1 .392-1.16l1.293-.97c.362-.271.527-.733.417-1.173L7.332 3.852A1.125 1.125 0 0 0 6.24 3H4.5A2.25 2.25 0 0 0 2.25 5.25v1.5Z"
+                                  />
+                                </svg>
+                                {m.phone}
+                              </a>
+                            )}
+                            {m.calendar && (
+                              <a
+                                href={m.calendar}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 rounded-full bg-blue-900 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-blue-800 hover:shadow-lg"
+                              >
+                                <svg
+                                  className="h-4 w-4"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  strokeWidth={2}
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0V11.25A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+                                  />
+                                </svg>
+                                Book Consultation
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </FadeUp>
                 </article>

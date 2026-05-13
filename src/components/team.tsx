@@ -19,7 +19,7 @@ const team: TeamMember[] = [
   {
     name: "Dr. Ravneet Dhaliwal",
     role: "Medical Director",
-    image: "/images/team/ravneet-dhaliwal.jpg",
+    image: "/images/team/reenu.jpg",
     bio: "Dr. Dhaliwal has worked at the front lines of acute inpatient care, managing patients during critical and transitional moments in their health. This experience has given her a deep understanding of both the strengths and limitations of traditional treatment pathways.",
   },
   {

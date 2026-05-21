@@ -114,8 +114,8 @@ const team: Member[] = [
       "Stem Cell Protocols",
       "TACRM Member",
     ],
-    phone: "+1 (630) 518-0014",
-    phoneHref: "tel:+16305180014",
+    phone: "+1 (646) 553-3030",
+    phoneHref: "tel:+16465533030",
     calendar: "https://calendly.com/dmolle-rhpny/30min",
   },
 ];

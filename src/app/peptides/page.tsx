@@ -7,7 +7,7 @@ import { FadeUp, FadeIn, StaggerContainer, StaggerItem } from "@/components/moti
 import { LetterAvatar } from "@/components/letter-avatar";
 import { BOOKING_URL } from "@/lib/constants";
 
-const siteUrl = "https://rhpny.com";
+const siteUrl = "https://www.rhpny.com";
 
 export const metadata: Metadata = {
   title: "Peptide Therapy | Precision Protocols for Recovery, Longevity & Performance",

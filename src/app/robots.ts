@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://rhpny.com/sitemap.xml",
+    sitemap: "https://www.rhpny.com/sitemap.xml",
   };
 }

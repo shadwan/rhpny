@@ -6,6 +6,18 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
   },
+  redirects: async () => [
+    {
+      source: "/terms-and-conditions",
+      destination: "/about",
+      permanent: true,
+    },
+    {
+      source: "/privacy-policy",
+      destination: "/about",
+      permanent: true,
+    },
+  ],
   headers: async () => [
     {
       source: "/(.*)",

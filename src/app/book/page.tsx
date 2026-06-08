@@ -4,7 +4,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { TYPEFORM_ID } from "@/lib/constants";
 
-const siteUrl = "https://rhpny.com";
+const siteUrl = "https://www.rhpny.com";
 
 export const metadata: Metadata = {
   title: "Book a Consultation",

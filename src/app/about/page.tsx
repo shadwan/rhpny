@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer";
 import { FadeUp, FadeIn, StaggerContainer, StaggerItem } from "@/components/motion";
 import { BOOKING_URL, ADDRESSES } from "@/lib/constants";
 
-const siteUrl = "https://rhpny.com";
+const siteUrl = "https://www.rhpny.com";
 
 export const metadata: Metadata = {
   title: "About | Our Medical Advisers",

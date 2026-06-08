@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer";
 import { FadeUp, FadeIn, StaggerContainer, StaggerItem } from "@/components/motion";
 import { BOOKING_URL } from "@/lib/constants";
 
-const siteUrl = "https://rhpny.com";
+const siteUrl = "https://www.rhpny.com";
 
 export const metadata: Metadata = {
   title: "Regenerative Medicine for Joint, Back and Shoulder Pain",

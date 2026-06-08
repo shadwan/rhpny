@@ -1,23 +1,11 @@
-import { DM_Sans, Inter, Instrument_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 
-export const headingFont = DM_Sans({
-  variable: "--font-heading",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700"],
-});
-
+// Body text font. Headings + default sans render via Figtree (--font-sans),
+// mapped in globals.css. Only fonts actually rendered are loaded here —
+// DM_Sans and Instrument_Serif were downloaded but never displayed.
 export const bodyFont = Inter({
   variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600"],
-});
-
-export const editorialFont = Instrument_Serif({
-  variable: "--font-editorial",
-  subsets: ["latin"],
-  display: "swap",
-  weight: "400",
-  style: ["normal", "italic"],
 });

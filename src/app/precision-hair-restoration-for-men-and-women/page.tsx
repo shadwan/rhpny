@@ -7,7 +7,7 @@ import { FadeUp, FadeIn, StaggerContainer, StaggerItem } from "@/components/moti
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { BOOKING_URL } from "@/lib/constants";
 
-const siteUrl = "https://rhpny.com";
+const siteUrl = "https://www.rhpny.com";
 
 export const metadata: Metadata = {
   title: "Precision Hair Restoration for Men and Women",

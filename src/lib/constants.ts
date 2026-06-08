@@ -1,4 +1,4 @@
-export const SITE_URL = "https://rhpny.com";
+export const SITE_URL = "https://www.rhpny.com";
 export const SITE_NAME = "Regen Health Physicians";
 export const PHONE_NUMBER = "+1 (929) 577-4222";
 export const PHONE_HREF = "tel:+19295774222";

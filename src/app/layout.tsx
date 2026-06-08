@@ -1,14 +1,16 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { headingFont, bodyFont, editorialFont } from "@/lib/fonts";
+import { bodyFont } from "@/lib/fonts";
+import { websiteSchema, medicalBusinessSchema } from "@/lib/schema";
 import "./globals.css";
 import { Figtree } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
+const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 
-const siteUrl = "https://rhpny.com";
+const siteUrl = "https://www.rhpny.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -38,6 +40,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    "max-video-preview": -1,
+    "max-image-preview": "large",
+    "max-snippet": -1,
     googleBot: {
       index: true,
       follow: true,
@@ -48,6 +53,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
+  },
+  verification: {
+    google: "YGVWMkc5t2ILWh2J-YVlt-4v8IEZadsIKaiOijHAUyc",
   },
 };
 
@@ -67,10 +75,55 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={cn("h-full", headingFont.variable, bodyFont.variable, editorialFont.variable, "font-sans", figtree.variable)}
+      lang="en-US"
+      className={cn("h-full", bodyFont.variable, "font-sans", figtree.variable)}
     >
+      <head>
+        {/* Structured data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(medicalBusinessSchema),
+          }}
+        />
+
+        {/* Google Tag Manager */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PM65979G');`}
+        </Script>
+        {/* End Google Tag Manager */}
+
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VDKYH4LPNW"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VDKYH4LPNW');`}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col font-body antialiased">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PM65979G"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         <Analytics />
         <SpeedInsights />

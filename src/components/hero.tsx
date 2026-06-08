@@ -144,16 +144,13 @@ export function Hero() {
           </div>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="mx-auto max-w-5xl text-balance font-heading text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]"
-        >
+        {/* LCP element — rendered statically (not via motion) so it paints in
+            the initial HTML instead of waiting on JS hydration. */}
+        <h1 className="mx-auto max-w-5xl text-balance font-heading text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
           Precision Hair Restoration,
           <br className="hidden md:inline" /> Aesthetic Medicine, and{" "}
           <span className="text-blue-900">Longevity Care</span>
-        </motion.h1>
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 24 }}

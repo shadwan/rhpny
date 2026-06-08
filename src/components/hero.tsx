@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "motion/react";
@@ -53,6 +53,32 @@ function StarRating() {
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
+  // Defer the 589KB video until it scrolls near the viewport so it doesn't
+  // compete for bandwidth during initial paint / LCP. Poster shows meanwhile.
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShowVideo(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!showVideo || !el) return;
+    el.load();
+    el.play().catch(() => {});
+  }, [showVideo]);
 
   const handleUnmute = async () => {
     const video = videoRef.current;
@@ -168,14 +194,14 @@ export function Hero() {
         >
           <video
             ref={videoRef}
-            autoPlay
             muted
             loop
             playsInline
-            preload="auto"
+            preload="none"
+            poster="/videos/hero-poster.jpg"
             className="h-full w-full object-cover"
           >
-            <source src="/videos/hero.mp4" type="video/mp4" />
+            {showVideo && <source src="/videos/hero.mp4" type="video/mp4" />}
           </video>
 
           {/* Tap to unmute / mute toggle */}

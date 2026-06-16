@@ -101,7 +101,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
         {/* End Google Tag Manager */}
 
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) — one library bootstraps gtag; both the GA4
+            (analytics) and Google Ads (conversions) tags fire off it. */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VDKYH4LPNW"
           strategy="afterInteractive"
@@ -110,7 +111,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-VDKYH4LPNW');`}
+gtag('config', 'G-VDKYH4LPNW');
+gtag('config', 'AW-18239128927');`}
         </Script>
       </head>
       <body className="min-h-full flex flex-col font-body antialiased">

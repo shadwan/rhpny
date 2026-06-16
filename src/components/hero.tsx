@@ -147,9 +147,9 @@ export function Hero() {
         {/* LCP element — rendered statically (not via motion) so it paints in
             the initial HTML instead of waiting on JS hydration. */}
         <h1 className="mx-auto max-w-5xl text-balance font-heading text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.1]">
-          Precision Hair Restoration,
-          <br className="hidden md:inline" /> Aesthetic Medicine, and{" "}
-          <span className="text-blue-900">Longevity Care</span>
+         Regenerative Stem Cell Therapy,
+          <br className="hidden md:inline" /> for Pain, Joint Damage, Neuropathy and Hair Loss{" "}
+          <span className="text-blue-900">FREE Consultation!</span>
         </h1>
 
         <motion.p
@@ -158,8 +158,8 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto mt-6 max-w-2xl text-balance text-base font-normal leading-[1.65] text-gray-700 sm:text-lg lg:text-xl lg:leading-[1.6]"
         >
-          Physician-led regenerative treatments, personalized to your biology
-          and delivered through concierge medicine in New York City.
+          Physician-led regenerative medicine in New York City — using advanced stem cell therapy 
+          to take on the joint pain, neuropathy, and complex conditions that often go unsolved.
         </motion.p>
 
         <motion.div

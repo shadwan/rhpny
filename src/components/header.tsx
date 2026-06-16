@@ -60,6 +60,7 @@ const sections: NavSection[] = [
 
 const flatLinks: { label: string; href: string }[] = [
   { label: "Longevity Programs", href: "#programs" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
 

@@ -1,13 +1,59 @@
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title:
-    "Stem Cell Therapy in New York | $3,999 | Regen Health Physicians",
-  description:
-    "Premium MSC stem cell IV therapy at Regen Health Physicians in New York for $3,999 — the same treatment top clinics charge $8,000–$15,000 for. Physician-led care.",
-};
+import { useState } from "react";
+
+const WEBHOOK_URL =
+  "https://services.leadconnectorhq.com/hooks/Gymcft7ndCPwa35xV8fl/webhook-trigger/63219b07-3106-4aae-8978-af0db9f66a98";
+const REDIRECT_URL = "https://rhpny.com/thankyou";
 
 export default function StemCellOfferPage() {
+  const [form, setForm] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    reason: "",
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  const update = (field: string, value: string) =>
+    setForm((f) => ({ ...f, [field]: value }));
+
+  const handleSubmit = async () => {
+    setError("");
+
+    if (!form.first_name.trim() || !form.email.trim() || !form.phone.trim()) {
+      setError("Please fill in your name, email, and phone number.");
+      return;
+    }
+
+    setSubmitting(true);
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...form,
+          full_name: `${form.first_name} ${form.last_name}`.trim(),
+          source: "Landing Page - Stem Cell $3,999",
+          page_url: typeof window !== "undefined" ? window.location.href : "",
+          submitted_at: new Date().toISOString(),
+        }),
+      });
+
+      // Fire Facebook Lead event if the pixel is present
+      if (typeof window !== "undefined" && (window as unknown as { fbq?: (...a: unknown[]) => void }).fbq) {
+        (window as unknown as { fbq: (...a: unknown[]) => void }).fbq("track", "Lead");
+      }
+
+      window.location.href = REDIRECT_URL;
+    } catch {
+      // Even if the webhook hiccups, still send them to thank-you so the UX isn't broken.
+      window.location.href = REDIRECT_URL;
+    }
+  };
+
   return (
     <>
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
@@ -26,7 +72,6 @@ export default function StemCellOfferPage() {
           overflow-x: hidden; -webkit-font-smoothing: antialiased;
         }
 
-        /* BRAND BAR */
         .scc-page .brand-bar { border-bottom: 1px solid var(--border); padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; }
         .scc-page .brand-logo { display: flex; align-items: center; }
         .scc-page .brand-logo img { height: 38px; width: auto; display: block; }
@@ -64,17 +109,37 @@ export default function StemCellOfferPage() {
         .scc-page .checklist li { display: flex; align-items: center; gap: 14px; font-size: 0.96em; color: var(--dark); font-weight: 400; }
         .scc-page .chk { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.65em; color: var(--accent); font-weight: 700; }
 
-        .scc-page .hero-right { background: var(--off-white); display: flex; flex-direction: column; justify-content: center; padding: 88px 80px; }
-        @media (max-width: 1100px) { .scc-page .hero-right { padding: 72px 56px; } }
-        @media (max-width: 960px)  { .scc-page .hero-right { padding: 56px 0 64px; } }
-        @media (max-width: 500px)  { .scc-page .hero-right { padding: 44px 0 56px; } }
-        @media (max-width: 960px) { .scc-page .hero-right .form-kicker, .scc-page .hero-right .form-heading, .scc-page .hero-right .form-note { padding-left: 36px; padding-right: 36px; } }
-        @media (max-width: 500px) { .scc-page .hero-right .form-kicker, .scc-page .hero-right .form-heading, .scc-page .hero-right .form-note { padding-left: 24px; padding-right: 24px; } }
+        .scc-page .hero-right { background: var(--off-white); display: flex; flex-direction: column; justify-content: center; padding: 72px 64px; }
+        @media (max-width: 1100px) { .scc-page .hero-right { padding: 64px 48px; } }
+        @media (max-width: 960px)  { .scc-page .hero-right { padding: 56px 36px 64px; } }
+        @media (max-width: 500px)  { .scc-page .hero-right { padding: 48px 24px 56px; } }
 
         .scc-page .form-kicker { font-size: 0.7em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
-        .scc-page .form-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.6em, 2.5vw, 2em); font-weight: 800; color: var(--black); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 24px; }
-        .scc-page .form-embed-wrap { width: 100%; overflow: hidden; }
-        .scc-page .form-embed-wrap iframe { width: 100%; min-height: 735px; border: none; display: block; border-radius: 0 !important; }
+        .scc-page .form-heading { font-family: 'Playfair Display', serif; font-size: clamp(1.6em, 2.5vw, 2em); font-weight: 800; color: var(--black); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 28px; }
+
+        .scc-page .lead-form { display: flex; flex-direction: column; gap: 16px; }
+        .scc-page .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 420px) { .scc-page .field-row { grid-template-columns: 1fr; } }
+        .scc-page .field { display: flex; flex-direction: column; gap: 6px; }
+        .scc-page .field label { font-size: 0.74em; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--mid); }
+        .scc-page .field input, .scc-page .field select {
+          font-family: 'DM Sans', sans-serif; font-size: 1em; color: var(--black);
+          padding: 14px 16px; border: 1px solid var(--border); border-radius: 8px;
+          background: var(--bg); outline: none; transition: border-color 0.15s, box-shadow 0.15s; width: 100%;
+        }
+        .scc-page .field input:focus, .scc-page .field select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(31,111,178,0.12); }
+        .scc-page .field select { appearance: none; -webkit-appearance: none; cursor: pointer; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2.5'><path d='M6 9l6 6 6-6'/></svg>"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
+
+        .scc-page .submit-btn {
+          margin-top: 8px; background: var(--accent); color: #fff; border: none;
+          font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.05em;
+          padding: 16px 24px; border-radius: 8px; cursor: pointer;
+          transition: background 0.2s, transform 0.15s, opacity 0.2s;
+        }
+        .scc-page .submit-btn:hover:not(:disabled) { background: #1a5f99; transform: translateY(-1px); }
+        .scc-page .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+        .scc-page .form-error { font-size: 0.82em; color: #c0392b; margin-top: 2px; }
         .scc-page .form-note { font-size: 0.72em; color: var(--light); text-align: center; margin-top: 14px; line-height: 1.6; }
 
         .scc-page .trust-bar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 40px; }
@@ -211,24 +276,81 @@ export default function StemCellOfferPage() {
               Sent to You
             </h2>
 
-            <div className="form-embed-wrap">
-              <iframe
-                src="https://api.leadconnectorhq.com/widget/form/Y2BlHd9AIHn6j5tnpaJz"
-                style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
-                id="inline-Y2BlHd9AIHn6j5tnpaJz"
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Regen Health Lead Form New York"
-                data-height="735"
-                data-layout-iframe-id="inline-Y2BlHd9AIHn6j5tnpaJz"
-                data-form-id="Y2BlHd9AIHn6j5tnpaJz"
-                title="Regen Health Lead Form New York"
-              ></iframe>
+            <div className="lead-form">
+              <div className="field-row">
+                <div className="field">
+                  <label htmlFor="first_name">First Name</label>
+                  <input
+                    id="first_name"
+                    type="text"
+                    autoComplete="given-name"
+                    value={form.first_name}
+                    onChange={(e) => update("first_name", e.target.value)}
+                  />
+                </div>
+                <div className="field">
+                  <label htmlFor="last_name">Last Name</label>
+                  <input
+                    id="last_name"
+                    type="text"
+                    autoComplete="family-name"
+                    value={form.last_name}
+                    onChange={(e) => update("last_name", e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className="field">
+                <label htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  autoComplete="email"
+                  value={form.email}
+                  onChange={(e) => update("email", e.target.value)}
+                />
+              </div>
+
+              <div className="field">
+                <label htmlFor="phone">Phone</label>
+                <input
+                  id="phone"
+                  type="tel"
+                  autoComplete="tel"
+                  value={form.phone}
+                  onChange={(e) => update("phone", e.target.value)}
+                />
+              </div>
+
+              <div className="field">
+                <label htmlFor="reason">What brings you in?</label>
+                <select
+                  id="reason"
+                  value={form.reason}
+                  onChange={(e) => update("reason", e.target.value)}
+                >
+                  <option value="">Select one…</option>
+                  <option value="Joint / Knee Pain">Joint / Knee Pain</option>
+                  <option value="Back / Spine">Back / Spine</option>
+                  <option value="Arthritis">Arthritis</option>
+                  <option value="Sports Injury">Sports Injury</option>
+                  <option value="Anti-Aging / Longevity">Anti-Aging / Longevity</option>
+                  <option value="Neuropathy">Neuropathy</option>
+                  <option value="General Wellness">General Wellness</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              {error && <div className="form-error">{error}</div>}
+
+              <button
+                type="button"
+                className="submit-btn"
+                onClick={handleSubmit}
+                disabled={submitting}
+              >
+                {submitting ? "Sending…" : "Request Information →"}
+              </button>
             </div>
 
             <p className="form-note">
@@ -412,9 +534,6 @@ export default function StemCellOfferPage() {
           treatment. Promotional pricing valid during offer period only.
         </div>
       </div>
-
-      {/* GHL form embed script — loads the iframe auto-resize / submission handling */}
-      <script src="https://link.msgsndr.com/js/form_embed.js" async></script>
     </>
   );
 }

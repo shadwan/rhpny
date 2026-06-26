@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { postMetaQuery } from "@/sanity/lib/queries";
-import { urlForImageWidth } from "@/sanity/lib/image";
+import { urlForImageWidth, hasImageAsset } from "@/sanity/lib/image";
 
 export const alt = "Regen Health Physicians blog article";
 export const size = { width: 1200, height: 630 };
@@ -27,7 +27,9 @@ export default async function OgImage({
   })) as Meta | null;
 
   const title = post?.title || "Regen Health Physicians";
-  const bg = post?.mainImage ? urlForImageWidth(post.mainImage, 1200, 60) : null;
+  const bg = hasImageAsset(post?.mainImage)
+    ? urlForImageWidth(post!.mainImage, 1200, 60)
+    : null;
 
   return new ImageResponse(
     (

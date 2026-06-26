@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer";
 import { FadeUp } from "@/components/motion";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { postsQuery } from "@/sanity/lib/queries";
-import { urlForImage } from "@/sanity/lib/image";
+import { urlForImage, hasImageAsset } from "@/sanity/lib/image";
 import { formatDate } from "@/sanity/lib/utils";
 
 const siteUrl = "https://www.rhpny.com";
@@ -72,7 +72,7 @@ export default async function BlogIndex() {
                   <article key={post._id} className="group flex flex-col">
                     <Link href={`/blog/${post.slug}`} className="flex flex-col">
                       <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-gray-100">
-                        {post.mainImage && (
+                        {hasImageAsset(post.mainImage) && (
                           <Image
                             src={urlForImage(post.mainImage)
                               .width(800)

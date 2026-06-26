@@ -13,7 +13,7 @@ import {
   postMetaQuery,
   postSlugsQuery,
 } from "@/sanity/lib/queries";
-import { urlForImage, urlForImageWidth } from "@/sanity/lib/image";
+import { urlForImage, urlForImageWidth, hasImageAsset } from "@/sanity/lib/image";
 import { estimateReadingTime, formatDate, portableTextToPlain } from "@/sanity/lib/utils";
 
 const siteUrl = "https://www.rhpny.com";
@@ -42,7 +42,11 @@ export async function generateMetadata({
   const url = `${siteUrl}/blog/${post.slug}`;
   const title = post.seo?.metaTitle || post.title;
   const description = post.seo?.metaDescription || post.excerpt;
-  const ogSource = post.seo?.ogImage || post.mainImage;
+  const ogSource = hasImageAsset(post.seo?.ogImage)
+    ? post.seo!.ogImage
+    : hasImageAsset(post.mainImage)
+      ? post.mainImage
+      : null;
   const ogImage = ogSource
     ? urlForImageWidth(ogSource, 1200)
     : `${url}/opengraph-image`;
@@ -135,7 +139,11 @@ export default async function PostPage({
 
   const url = `${siteUrl}/blog/${post.slug}`;
   const readingTime = estimateReadingTime(post.body, post.readingTime);
-  const ogSource = post.seo?.ogImage || post.mainImage;
+  const ogSource = hasImageAsset(post.seo?.ogImage)
+    ? post.seo!.ogImage
+    : hasImageAsset(post.mainImage)
+      ? post.mainImage
+      : null;
   const ogImage = ogSource ? urlForImageWidth(ogSource, 1200) : undefined;
 
   const jsonLd = {
@@ -215,7 +223,7 @@ export default async function PostPage({
               <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-gray-500">
                 {post.author && (
                   <span className="flex items-center gap-2">
-                    {post.author.image && (
+                    {hasImageAsset(post.author.image) && (
                       <Image
                         src={urlForImage(post.author.image)
                           .width(64)
@@ -242,7 +250,7 @@ export default async function PostPage({
               </div>
             </header>
 
-            {post.mainImage && (
+            {hasImageAsset(post.mainImage) && (
               <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl">
                 <Image
                   src={urlForImage(post.mainImage)
@@ -265,7 +273,7 @@ export default async function PostPage({
             {/* Author bio */}
             {post.author?.bio && (
               <div className="mt-14 flex gap-4 rounded-2xl border border-gray-200 bg-stone-50 p-6">
-                {post.author.image && (
+                {hasImageAsset(post.author.image) && (
                   <Image
                     src={urlForImage(post.author.image)
                       .width(120)
@@ -310,7 +318,7 @@ export default async function PostPage({
                     className="group flex flex-col"
                   >
                     <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-gray-100">
-                      {r.mainImage && (
+                      {hasImageAsset(r.mainImage) && (
                         <Image
                           src={urlForImage(r.mainImage)
                             .width(600)

@@ -143,7 +143,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="pt-8 text-center">
           <p className="text-xs text-gray-600">
-            &copy;{new Date().getFullYear()} RegenHealth Physicians. All rights
+            &copy;{new Date().getFullYear()} RegenHealth Doctors. All rights
             reserved.
           </p>
         </div>

@@ -26,7 +26,7 @@ const team: TeamMember[] = [
     name: "Ajit Dhaliwal MD, MBA",
     role: "Founder and Clinical Vision",
     image: "/images/team/ajit-dhaliwal.jpeg",
-    bio: "Internal Medicine\u2013trained physician with a performance-driven approach to health strategy. Regenerative and longevity-focused clinical advisor, educator, and program developer.",
+    bio: "Internal Medicine\u2013trained doctor with a performance-driven approach to health strategy. Regenerative and longevity-focused clinical advisor, educator, and program developer.",
   },
   {
     name: "Jay Maly",
@@ -50,7 +50,7 @@ const team: TeamMember[] = [
     name: "Debra Moll\u00e9",
     role: "VP of Patient Advocacy",
     image: "/images/team/debra-molle.jpg",
-    bio: "15,000+ patients guided. 30+ years of experience. Debra Moll\u00e9 joins Regen Health Physicians as VP of Patient Advocacy, bringing a career spent helping people navigate the most important health decisions of their lives with clarity, compassion, and confidence. Since 2013, she has specialised in regenerative medicine, working alongside physicians and clinical teams to educate patients on advanced stem cell protocols and ensure every individual feels seen, heard, and supported. Her background spans Life Time Fitness, Advocate Good Shepherd Hospital, and Rush Copley Medical Center. She is a member of The American College of Regenerative Medicine (TACRM) and a recipient of the Who\u2019s Who in America award.",
+    bio: "15,000+ patients guided. 30+ years of experience. Debra Moll\u00e9 joins Regen Health Physicians as VP of Patient Advocacy, bringing a career spent helping people navigate the most important health decisions of their lives with clarity, compassion, and confidence. Since 2013, she has specialised in regenerative medicine, working alongside doctors and clinical teams to educate patients on advanced stem cell protocols and ensure every individual feels seen, heard, and supported. Her background spans Life Time Fitness, Advocate Good Shepherd Hospital, and Rush Copley Medical Center. She is a member of The American College of Regenerative Medicine (TACRM) and a recipient of the Who\u2019s Who in America award.",
     phone: "+1 (646) 553-3030",
     phoneHref: "tel:+16465533030",
     calendar: "https://calendly.com/dmolle-rhpny/30min",

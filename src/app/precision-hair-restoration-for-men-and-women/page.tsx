@@ -12,7 +12,7 @@ const siteUrl = "https://www.rhpny.com";
 export const metadata: Metadata = {
   title: "Precision Hair Restoration for Men and Women",
   description:
-    "Physician-led regenerative hair restoration in NYC. Personalized biologic-driven protocols for thinning hair, receding hairlines, and hair loss in men and women. No surgery. Virtual consultations available.",
+    "Doctor-led regenerative hair restoration in NYC. Personalized biologic-driven protocols for thinning hair, receding hairlines, and hair loss in men and women. No surgery. Virtual consultations available.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title:
       "Precision Hair Restoration for Men and Women | Regen Health Physicians",
     description:
-      "Physician-led regenerative hair restoration in NYC. Personalized biologic-driven protocols for thinning hair, receding hairlines, and hair loss in men and women.",
+      "Doctor-led regenerative hair restoration in NYC. Personalized biologic-driven protocols for thinning hair, receding hairlines, and hair loss in men and women.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title:
       "Precision Hair Restoration for Men and Women | Regen Health Physicians",
     description:
-      "Physician-led regenerative hair restoration in NYC. Personalized biologic-driven protocols for thinning hair, receding hairlines, and hair loss.",
+      "Doctor-led regenerative hair restoration in NYC. Personalized biologic-driven protocols for thinning hair, receding hairlines, and hair loss.",
     images: ["/images/og-image.jpg"],
   },
   alternates: {
@@ -86,7 +86,7 @@ const processSteps = [
   {
     num: "03",
     title: "Precision Treatment",
-    description: "Physician-led application using advanced techniques.",
+    description: "Doctor-led application using advanced techniques.",
   },
   {
     num: "04",
@@ -114,7 +114,7 @@ export default function HairRestorationPage() {
                   <span className="text-blue-900">Men and Women</span>
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl lg:leading-[1.6]">
-                  Physician-led regenerative treatments designed to support
+                  Doctor-led regenerative treatments designed to support
                   follicle vitality and natural regrowth without surgery and
                   without assembly-line medicine. Personalized protocols.
                   Biologic-driven care. NYC-based with virtual consultations
@@ -190,16 +190,16 @@ export default function HairRestorationPage() {
           </div>
         </section>
 
-        {/* ─── Physician-Led — text + consultation image ────────────── */}
+        {/* ─── Doctor-Led — text + consultation image ────────────── */}
         <section className="bg-stone-50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
               <FadeUp>
                 <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                  Physician-Led Care
+                  Doctor-Led Care
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  Physician-Led Regenerative Hair Restoration
+                  Doctor-Led Regenerative Hair Restoration
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
                   Hair restoration at our clinic is not delegated or templated.
@@ -584,7 +584,7 @@ export default function HairRestorationPage() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                     <Image
                       src="/images/hair-restoration/hero-banner.png"
-                      alt="Physician performing scalp treatment"
+                      alt="Doctor performing scalp treatment"
                       fill
                       className="object-cover"
                     />

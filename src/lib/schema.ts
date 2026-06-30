@@ -20,7 +20,7 @@ export const medicalBusinessSchema = {
       "@id": "https://www.rhpny.com/#medicalbusiness",
       name: "RegenHealth Physicians",
       description:
-        "Physician-led regenerative treatments, personalized to your biology and delivered through concierge medicine.",
+        "Doctor-led regenerative treatments, personalized to your biology and delivered through concierge medicine.",
       url: "https://www.rhpny.com/",
       logo: {
         "@type": "ImageObject",
@@ -34,7 +34,7 @@ export const medicalBusinessSchema = {
         "@type": "VideoObject",
         name: "RegenHealth Physicians - Regenerative Medicine",
         description:
-          "Physician-led regenerative treatments, personalized to your biology and delivered through concierge medicine.",
+          "Doctor-led regenerative treatments, personalized to your biology and delivered through concierge medicine.",
         thumbnailUrl:
           "https://framerusercontent.com/images/heiUOx7MN7NGPPf4FSzuitKGDU.png?width=673&height=147",
         contentUrl:
@@ -55,9 +55,9 @@ export const medicalBusinessSchema = {
         "@type": "Physician",
         "@id": "https://www.rhpny.com/#physician",
         name: "Dr. Ajit Dhaliwal",
-        jobTitle: "Physician and Founder",
+        jobTitle: "Doctor and Founder",
         description:
-          "Dr. Dhaliwal focuses on clinical vision, protocol development, and outcome standards—bringing physician-level insight to the systems and care models that guide every patient journey.",
+          "Dr. Dhaliwal focuses on clinical vision, protocol development, and outcome standards—bringing doctor-level insight to the systems and care models that guide every patient journey.",
         image: {
           "@type": "ImageObject",
           url: "https://framerusercontent.com/images/KH7devpjxVu1EtWOTSu1GGHCEE0.jpeg?width=1024&height=1024",
@@ -69,9 +69,9 @@ export const medicalBusinessSchema = {
         "@type": "Physician",
         "@id": "https://www.rhpny.com/#physician",
         name: "Dr. Ajit Dhaliwal",
-        jobTitle: "Physician and Founder",
+        jobTitle: "Doctor and Founder",
         description:
-          "Dr. Dhaliwal focuses on clinical vision, protocol development, and outcome standards—bringing physician-level insight to the systems and care models that guide every patient journey.",
+          "Dr. Dhaliwal focuses on clinical vision, protocol development, and outcome standards—bringing doctor-level insight to the systems and care models that guide every patient journey.",
         image: {
           "@type": "ImageObject",
           url: "https://framerusercontent.com/images/KH7devpjxVu1EtWOTSu1GGHCEE0.jpeg?width=1024&height=1024",
@@ -235,9 +235,9 @@ export const medicalBusinessSchema = {
       "@type": "Physician",
       "@id": "https://www.rhpny.com/#physician",
       name: "Dr. Ajit Dhaliwal",
-      jobTitle: "Physician and Founder",
+      jobTitle: "Doctor and Founder",
       description:
-        "Dr. Dhaliwal focuses on clinical vision, protocol development, and outcome standards—bringing physician-level insight to the systems and care models that guide every patient journey.",
+        "Dr. Dhaliwal focuses on clinical vision, protocol development, and outcome standards—bringing doctor-level insight to the systems and care models that guide every patient journey.",
       url: "https://www.rhpny.com/",
       image: {
         "@type": "ImageObject",

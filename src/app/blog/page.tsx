@@ -14,14 +14,14 @@ const siteUrl = "https://www.rhpny.com";
 export const metadata: Metadata = {
   title: "Blog | Regenerative Medicine Insights",
   description:
-    "Physician-authored articles on regenerative medicine, hair restoration, aesthetics, peptides, longevity, and chronic disease care from Regen Health Physicians.",
+    "Doctor-authored articles on regenerative medicine, hair restoration, aesthetics, peptides, longevity, and chronic disease care from Regen Health Physicians.",
   alternates: { canonical: `${siteUrl}/blog` },
   openGraph: {
     type: "website",
     url: `${siteUrl}/blog`,
     title: "Regen Health Physicians Blog",
     description:
-      "Physician-authored insights on regenerative medicine, longevity, and concierge care.",
+      "Doctor-authored insights on regenerative medicine, longevity, and concierge care.",
   },
 };
 
@@ -53,7 +53,7 @@ export default async function BlogIndex() {
                 The Regen Health Blog
               </h1>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg">
-                Physician-authored articles on regenerative medicine, longevity,
+                Doctor-authored articles on regenerative medicine, longevity,
                 and concierge care.
               </p>
             </FadeUp>

@@ -11,7 +11,7 @@ const siteUrl = "https://www.rhpny.com";
 export const metadata: Metadata = {
   title: "Regenerative Medicine for Joint, Back and Shoulder Pain",
   description:
-    "Physician-led biologic therapies designed to support tissue repair, reduce inflammation, and improve function — without immediate surgery. Personalized regenerative care in New York City. Virtual consultations available.",
+    "Doctor-led biologic therapies designed to support tissue repair, reduce inflammation, and improve function — without immediate surgery. Personalized regenerative care in New York City. Virtual consultations available.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title:
       "Regenerative Medicine for Joint, Back and Shoulder Pain | Regen Health Physicians",
     description:
-      "Physician-led biologic therapies designed to support tissue repair, reduce inflammation, and improve function without immediate surgery.",
+      "Doctor-led biologic therapies designed to support tissue repair, reduce inflammation, and improve function without immediate surgery.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title:
       "Regenerative Medicine for Joint, Back and Shoulder Pain | Regen Health Physicians",
     description:
-      "Physician-led biologic therapies designed to support tissue repair, reduce inflammation, and improve function without immediate surgery.",
+      "Doctor-led biologic therapies designed to support tissue repair, reduce inflammation, and improve function without immediate surgery.",
     images: ["/images/og-image.jpg"],
   },
   alternates: {
@@ -55,7 +55,7 @@ const cellularMechanisms = [
 ];
 
 const therapyAttributes = [
-  "Physician-evaluated",
+  "Doctor-evaluated",
   "Individualized",
   "Non-surgical",
   "Structural tissue health",
@@ -122,7 +122,7 @@ const testimonials = [
   {
     headline: "Regained My Active Lifestyle",
     quote:
-      "After months of lower back discomfort, the physician-led approach gave me a clear path forward. I felt like a candidate for a specific therapy, not just a number.",
+      "After months of lower back discomfort, the doctor-led approach gave me a clear path forward. I felt like a candidate for a specific therapy, not just a number.",
     name: "Wedly",
     context: "Lumbar Spine Patient",
     image: "/images/regenerative-medicine/testim-3.png",
@@ -149,7 +149,7 @@ export default function RegenerativeMedicinePage() {
                   </span>
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl lg:leading-[1.6]">
-                  Physician-led biologic therapies designed to support tissue
+                  Doctor-led biologic therapies designed to support tissue
                   repair, reduce inflammation, and improve function without
                   immediate surgery. Personalized care in New York City.
                   Virtual consultations available for out-of-state and
@@ -175,7 +175,7 @@ export default function RegenerativeMedicinePage() {
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                   <Image
                     src="/images/regenerative-medicine/physician.jpg"
-                    alt="Physician evaluating joint function with patient"
+                    alt="Doctor evaluating joint function with patient"
                     fill
                     priority
                     className="object-cover"
@@ -194,7 +194,7 @@ export default function RegenerativeMedicinePage() {
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
                   <Image
                     src="/images/regenerative-medicine/patient-1.jpg"
-                    alt="Physician treating lower back of patient"
+                    alt="Doctor treating lower back of patient"
                     fill
                     className="object-cover"
                   />
@@ -540,7 +540,7 @@ export default function RegenerativeMedicinePage() {
           </div>
         </section>
 
-        {/* Physician authority */}
+        {/* Doctor authority */}
         <section className="bg-white py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -557,10 +557,10 @@ export default function RegenerativeMedicinePage() {
 
               <FadeUp>
                 <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                  Physician Authority
+                  Doctor Authority
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                  Physician-Led Regenerative Care
+                  Doctor-Led Regenerative Care
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
                   Care is led by Dr. Ajit Dhaliwal, with extensive experience
@@ -575,7 +575,7 @@ export default function RegenerativeMedicinePage() {
                     Dr. Ajit Dhaliwal
                   </p>
                   <p className="mt-1 text-xs text-gray-500">
-                    Physician-Led Clinical Vision
+                    Doctor-Led Clinical Vision
                   </p>
                 </div>
               </FadeUp>

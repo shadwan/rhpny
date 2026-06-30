@@ -35,7 +35,7 @@ export function SocialProof() {
 
         <FadeUp className="mt-10 text-center">
           <p className="text-sm font-medium tracking-wide text-gray-500">
-            Physician-led care. Private protocols. No volume medicine.
+            Doctor-led care. Private protocols. No volume medicine.
           </p>
         </FadeUp>
       </div>

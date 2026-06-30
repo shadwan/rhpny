@@ -39,7 +39,7 @@ const services: Service[] = [
   {
     title: "Aesthetics",
     description:
-      "Physician-performed treatments for skin quality, structure, and rejuvenation — without overcorrection.",
+      "Doctor-performed treatments for skin quality, structure, and rejuvenation — without overcorrection.",
     image: "/images/services/aesthetics.jpeg",
     href: "/aesthetics",
     spanClass: "",
@@ -232,7 +232,7 @@ export function Services() {
             Integrated Regenerative Care
           </h2>
           <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
-            Six specialties, one physician-led practice. Every protocol
+            Six specialties, one doctor-led practice. Every protocol
             personalized to your biology.
           </p>
         </FadeUp>

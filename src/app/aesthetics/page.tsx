@@ -12,7 +12,7 @@ const siteUrl = "https://www.rhpny.com";
 export const metadata: Metadata = {
   title: "Aesthetic Treatments | Regenerative Skin Medicine",
   description:
-    "Physician-led regenerative aesthetic treatments at Regen Health. Stem cell therapy, PRP, and peptide protocols for collagen rebuilding, skin renewal, and compounding long-term results. NYC & Salt Lake City.",
+    "Doctor-led regenerative aesthetic treatments at Regen Health. Stem cell therapy, PRP, and peptide protocols for collagen rebuilding, skin renewal, and compounding long-term results. NYC & Salt Lake City.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Regen Health Physicians",
     title: "Aesthetic Treatments | Regen Health Physicians",
     description:
-      "Regenerative aesthetic medicine that works at the cellular level — stem cell, PRP, and peptide protocols. Physician-led, concierge-delivered.",
+      "Regenerative aesthetic medicine that works at the cellular level — stem cell, PRP, and peptide protocols. Doctor-led, concierge-delivered.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
@@ -128,7 +128,7 @@ const testimonials = [
 const faqs = [
   {
     q: "Are these treatments safe?",
-    a: "All Regen Health aesthetic protocols are physician-designed and administered under medical supervision. Stem cell therapy, PRP, and peptide treatments have well-established safety profiles when conducted in a clinical setting with properly sourced compounds — which is the only standard we operate to.",
+    a: "All Regen Health aesthetic protocols are doctor-designed and administered under medical supervision. Stem cell therapy, PRP, and peptide treatments have well-established safety profiles when conducted in a clinical setting with properly sourced compounds — which is the only standard we operate to.",
   },
   {
     q: "How soon will I see results?",
@@ -136,7 +136,7 @@ const faqs = [
   },
   {
     q: "Can these treatments be combined?",
-    a: "Yes — and they are most powerful when combined. Our physicians frequently design layered protocols that use stem cell therapy, PRP, and peptides in sequence for compounding regenerative results.",
+    a: "Yes — and they are most powerful when combined. Our doctors frequently design layered protocols that use stem cell therapy, PRP, and peptides in sequence for compounding regenerative results.",
   },
   {
     q: "Do I need to visit in person?",
@@ -343,7 +343,7 @@ export default function AestheticsPage() {
                   Why Regen Health
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                  Physician-led. Evidence-based. Results-obsessed.
+                  Doctor-led. Evidence-based. Results-obsessed.
                 </h2>
               </FadeUp>
 

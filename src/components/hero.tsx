@@ -158,7 +158,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto mt-6 max-w-2xl text-balance text-base font-normal leading-[1.65] text-gray-700 sm:text-lg lg:text-xl lg:leading-[1.6]"
         >
-          Physician-led regenerative medicine in New York City — using advanced stem cell therapy 
+          Doctor-led regenerative medicine in New York City — using advanced stem cell therapy 
           to take on the joint pain, neuropathy, and complex conditions that often go unsolved.
         </motion.p>
 

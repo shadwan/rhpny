@@ -42,7 +42,7 @@ const sections: NavSection[] = [
       {
         label: "Aesthetics",
         href: "/aesthetics",
-        description: "Physician-led skin and rejuvenation.",
+        description: "Doctor-led skin and rejuvenation.",
       },
       {
         label: "Peptides",
@@ -262,8 +262,8 @@ export function Header() {
                     </p>
                     <p className="mt-3 text-sm leading-relaxed text-gray-500">
                       {activeSection.id === "services"
-                        ? "Physician-designed protocols, biologically personalized, delivered through concierge medicine."
-                        : "A practice built on physician insight, real outcomes, and personal accountability."}
+                        ? "Doctor-designed protocols, biologically personalized, delivered through concierge medicine."
+                        : "A practice built on doctor insight, real outcomes, and personal accountability."}
                     </p>
                   </div>
 

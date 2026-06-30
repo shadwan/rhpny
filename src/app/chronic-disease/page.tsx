@@ -12,7 +12,7 @@ const siteUrl = "https://www.rhpny.com";
 export const metadata: Metadata = {
   title: "Chronic Disease Management | Regenerative & Functional Medicine",
   description:
-    "Physician-led care for autoimmune, metabolic, and chronic inflammatory conditions. Regenerative therapies, functional medicine, and concierge oversight in NYC and Salt Lake City.",
+    "Doctor-led care for autoimmune, metabolic, and chronic inflammatory conditions. Regenerative therapies, functional medicine, and concierge oversight in NYC and Salt Lake City.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -130,7 +130,7 @@ const approach = [
 ];
 
 const whyPoints = [
-  "Physician-led care that integrates with — not replaces — your existing specialists",
+  "Doctor-led care that integrates with — not replaces — your existing specialists",
   "Access to regenerative tools (peptides, biologics, PRP, stem cell) most chronic-disease clinics do not offer",
   "Lab-driven protocols with continuous tracking and adjustment",
   "Concierge access for the long, non-linear arc of chronic illness",
@@ -168,7 +168,7 @@ const faqs = [
   },
   {
     q: "How is this different from a typical functional medicine clinic?",
-    a: "We are physician-led and combine functional medicine with access to regenerative therapies — peptides, PRP, stem cell protocols, and biologics — alongside continuous lab tracking and concierge oversight. The depth of clinical access is the difference.",
+    a: "We are doctor-led and combine functional medicine with access to regenerative therapies — peptides, PRP, stem cell protocols, and biologics — alongside continuous lab tracking and concierge oversight. The depth of clinical access is the difference.",
   },
   {
     q: "How long do programs run?",
@@ -176,7 +176,7 @@ const faqs = [
   },
   {
     q: "Are these therapies safe alongside my current medications?",
-    a: "All protocols are designed by physicians with full review of your current medications, conditions, and care plan. We coordinate with your specialists and adjust accordingly.",
+    a: "All protocols are designed by doctors with full review of your current medications, conditions, and care plan. We coordinate with your specialists and adjust accordingly.",
   },
   {
     q: "Do I need to visit in person?",
@@ -232,7 +232,7 @@ export default function ChronicDiseasePage() {
                 <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
                   <Image
                     src="/images/chronic-disease/hero.jpeg"
-                    alt="Physician in conversation with a patient"
+                    alt="Doctor in conversation with a patient"
                     fill
                     priority
                     className="object-cover"
@@ -273,7 +273,7 @@ export default function ChronicDiseasePage() {
                 <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
                   Our protocols pair regenerative biologics and peptides with
                   rigorous lab tracking, functional medicine, and continuous
-                  physician oversight. The goal is durable change — not
+                  doctor oversight. The goal is durable change — not
                   endless management.
                 </p>
                 <p className="mt-4 text-sm font-medium text-gray-900 sm:text-base">
@@ -407,7 +407,7 @@ export default function ChronicDiseasePage() {
                   Why Regen Health
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                  Physician-led. Integrative. Continuous.
+                  Doctor-led. Integrative. Continuous.
                 </h2>
               </FadeUp>
 
@@ -489,7 +489,7 @@ export default function ChronicDiseasePage() {
                 </h2>
                 <p className="mt-6 max-w-lg text-base leading-relaxed text-blue-200/70 sm:text-lg">
                   If you are ready for an integrative, regenerative approach to
-                  the condition you have been managing — designed by physicians
+                  the condition you have been managing — designed by doctors
                   who track outcomes — we are ready to build your plan.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">

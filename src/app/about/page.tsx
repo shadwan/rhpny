@@ -11,7 +11,7 @@ const siteUrl = "https://www.rhpny.com";
 export const metadata: Metadata = {
   title: "About | Our Medical Advisers",
   description:
-    "Regen Health Physicians — a physician-led concierge medical practice founded by Dr. Ajit Dhaliwal. Meet the medical team delivering regenerative care across New York City and Salt Lake City.",
+    "Regen Health Physicians — a doctor-led concierge medical practice founded by Dr. Ajit Dhaliwal. Meet the medical team delivering regenerative care across New York City and Salt Lake City.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     siteName: "Regen Health Physicians",
     title: "About | Regen Health Physicians",
     description:
-      "Physician-led concierge regenerative medicine. Meet the team across NYC and SLC.",
+      "Doctor-led concierge regenerative medicine. Meet the team across NYC and SLC.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "About | Regen Health Physicians",
-    description: "Physician-led concierge regenerative medicine.",
+    description: "Doctor-led concierge regenerative medicine.",
     images: ["/images/og-image.jpg"],
   },
   alternates: {
@@ -49,7 +49,7 @@ const team: Member[] = [
     name: "Ajit Dhaliwal MD, MBA",
     role: "Founder and Clinical Vision",
     image: "/images/team/ajit-dhaliwal.jpeg",
-    bio: "Internal Medicine–trained physician with a performance-driven approach to health strategy. Regenerative and longevity-focused clinical advisor, educator, and program developer.",
+    bio: "Internal Medicine–trained doctor with a performance-driven approach to health strategy. Regenerative and longevity-focused clinical advisor, educator, and program developer.",
     specialties: [
       "Internal Medicine",
       "Regenerative Protocols",
@@ -107,7 +107,7 @@ const team: Member[] = [
     name: "Debra Mollé",
     role: "VP of Patient Advocacy",
     image: "/images/team/debra-molle.jpg",
-    bio: "15,000+ patients guided. 30+ years of experience. Debra Mollé joins Regen Health Physicians as VP of Patient Advocacy, bringing a career spent helping people navigate the most important health decisions of their lives with clarity, compassion, and confidence. Since 2013, she has specialised in regenerative medicine, working alongside physicians and clinical teams to educate patients on advanced stem cell protocols and ensure every individual feels seen, heard, and supported. Her background spans Life Time Fitness, Advocate Good Shepherd Hospital, and Rush Copley Medical Center. She is a member of The American College of Regenerative Medicine (TACRM) and a recipient of the Who’s Who in America award.",
+    bio: "15,000+ patients guided. 30+ years of experience. Debra Mollé joins Regen Health Physicians as VP of Patient Advocacy, bringing a career spent helping people navigate the most important health decisions of their lives with clarity, compassion, and confidence. Since 2013, she has specialised in regenerative medicine, working alongside doctors and clinical teams to educate patients on advanced stem cell protocols and ensure every individual feels seen, heard, and supported. Her background spans Life Time Fitness, Advocate Good Shepherd Hospital, and Rush Copley Medical Center. She is a member of The American College of Regenerative Medicine (TACRM) and a recipient of the Who’s Who in America award.",
     specialties: [
       "Patient Advocacy",
       "Regenerative Medicine Education",
@@ -122,8 +122,8 @@ const team: Member[] = [
 
 const principles = [
   {
-    title: "Physician-designed",
-    body: "Every protocol originates with a physician. Not delegated. Not templated.",
+    title: "Doctor-designed",
+    body: "Every protocol originates with a doctor. Not delegated. Not templated.",
   },
   {
     title: "Biologically personalized",
@@ -139,7 +139,7 @@ const stats = [
   { number: "500+", label: "Patients served" },
   { number: "10+", label: "Years combined experience" },
   { number: "2", label: "Cities — NYC & SLC" },
-  { number: "100%", label: "Physician-led" },
+  { number: "100%", label: "Doctor-led" },
 ];
 
 export default function AboutPage() {
@@ -161,10 +161,10 @@ export default function AboutPage() {
                 </span>
               </h1>
               <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl lg:leading-[1.6]">
-                A physician-led concierge practice built on regenerative
+                A doctor-led concierge practice built on regenerative
                 biology and honest clinical judgment. No volume clinics. No
                 assembly lines. Protocols designed and overseen at the
-                physician level — then carried through with concierge-level
+                doctor level — then carried through with concierge-level
                 care.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -232,13 +232,13 @@ export default function AboutPage() {
                   Founder&apos;s Perspective
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                  A Practice Built on Physician Insight
+                  A Practice Built on Doctor Insight
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
                   Founded by Dr. Ajit Dhaliwal — an Internal Medicine–trained
-                  physician with a performance-driven approach to health
+                  doctor with a performance-driven approach to health
                   strategy. Clinical vision, protocol development, and outcome
-                  standards are set at the physician level and carried through
+                  standards are set at the doctor level and carried through
                   every patient journey.
                 </p>
                 <blockquote className="mt-8 rounded-2xl border-l-4 border-blue-900 bg-stone-50 p-6">
@@ -473,7 +473,7 @@ export default function AboutPage() {
                     {ADDRESSES.utah.city}
                   </p>
                   <p className="mt-6 text-sm text-gray-500">
-                    Same protocols, same physician oversight. Serving
+                    Same protocols, same doctor oversight. Serving
                     patients across the Mountain West.
                   </p>
                 </div>

@@ -35,12 +35,12 @@ export function Physician() {
           <div>
             <FadeUp>
               <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                Physician Authority
+                Doctor Authority
               </span>
             </FadeUp>
             <FadeUp>
               <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                Physician Insight{" "}
+                Doctor Insight{" "}
                 <span className="text-gray-400">Still Matters</span>
               </h2>
             </FadeUp>
@@ -53,7 +53,7 @@ export function Physician() {
             <FadeUp>
               <p className="mt-4 text-base leading-relaxed text-gray-500">
                 Today, Dr. Dhaliwal focuses on clinical vision, protocol
-                development, and outcome standards—bringing physician-level
+                development, and outcome standards—bringing doctor-level
                 insight to the systems and care models that guide every patient
                 journey.
               </p>

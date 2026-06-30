@@ -14,7 +14,7 @@ const faqs: FaqItem[] = [
     q: "What does Regen Health Physicians actually do?",
     a: (
       <p>
-        We&rsquo;re a physician-led regenerative medicine practice with locations
+        We&rsquo;re a doctor-led regenerative medicine practice with locations
         in New York City and Salt Lake City. Our work spans six core specialties:
         hair restoration, regenerative medicine, aesthetics, joint and orthopedic
         care, peptide therapy, and chronic disease care. We also run ten longevity
@@ -29,9 +29,9 @@ const faqs: FaqItem[] = [
     a: (
       <p>
         A med spa runs on volume, cookie-cutter protocols, and surface-level
-        treatments. We don&rsquo;t. Our care is physician-designed, biologically
+        treatments. We don&rsquo;t. Our care is doctor-designed, biologically
         personalized, and delivered through a concierge model with direct access
-        to your physician. If you&rsquo;re looking for a quick walk-in injection,
+        to your doctor. If you&rsquo;re looking for a quick walk-in injection,
         we&rsquo;re probably not the right fit. If you want a real clinical
         outcome, we are.
       </p>
@@ -55,7 +55,7 @@ const faqs: FaqItem[] = [
       <p>
         It starts with a private consultation &mdash; virtual or in person &mdash;
         where we review your goals, history, and biomarkers. From there, your
-        physician designs a personalized protocol. We don&rsquo;t pressure-sell
+        doctor designs a personalized protocol. We don&rsquo;t pressure-sell
         packages, and we don&rsquo;t recommend treatments you don&rsquo;t need.
         Consultations are unhurried by design.
       </p>
@@ -185,11 +185,11 @@ const faqs: FaqItem[] = [
     q: "Are the treatments safe? Is there downtime?",
     a: (
       <p>
-        Every protocol is delivered or directly overseen by a physician, with
+        Every protocol is delivered or directly overseen by a doctor, with
         treatments selected based on your individual biology, history, and goals.
         Most regenerative and aesthetic procedures involve minimal to no downtime
         &mdash; many of our patients fly in from out of state and return home the
-        same day. Your physician will walk you through any specific recovery
+        same day. Your doctor will walk you through any specific recovery
         considerations during your consultation.
       </p>
     ),
@@ -299,7 +299,7 @@ export function Faq() {
           <FadeUp>
             <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">
               Everything you need to know before booking with Regen Health
-              Physicians.
+              Doctors.
             </p>
           </FadeUp>
         </div>

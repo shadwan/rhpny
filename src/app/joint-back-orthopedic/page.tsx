@@ -11,7 +11,7 @@ const siteUrl = "https://www.rhpny.com";
 export const metadata: Metadata = {
   title: "Joint, Back & Orthopedic Care",
   description:
-    "Non-surgical regenerative care for joint pain, spine issues, and orthopedic injuries. Physician-led biologic therapies for athletes, active adults, and post-surgical recovery in New York City.",
+    "Non-surgical regenerative care for joint pain, spine issues, and orthopedic injuries. Doctor-led biologic therapies for athletes, active adults, and post-surgical recovery in New York City.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Regen Health Physicians",
     title: "Joint, Back & Orthopedic Care | Regen Health Physicians",
     description:
-      "Non-surgical regenerative care for joint pain, spine issues, and orthopedic injuries. Physician-led biologic therapies.",
+      "Non-surgical regenerative care for joint pain, spine issues, and orthopedic injuries. Doctor-led biologic therapies.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
@@ -139,7 +139,7 @@ const testimonials = [
   {
     headline: "Path Forward After Lumbar Pain",
     quote:
-      "After months of lower back discomfort, the physician-led approach gave me a clear path forward. I felt like a candidate for a specific therapy, not just a number.",
+      "After months of lower back discomfort, the doctor-led approach gave me a clear path forward. I felt like a candidate for a specific therapy, not just a number.",
     name: "Wedly",
     context: "Lumbar Spine Patient",
     image: "/images/regenerative-medicine/testim-3.png",
@@ -167,7 +167,7 @@ export default function JointBackOrthopedicPage() {
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl lg:leading-[1.6]">
                   Biologic therapies for knees, backs, shoulders, and hips —
-                  guided by imaging, physician evaluation, and ultrasound
+                  guided by imaging, doctor evaluation, and ultrasound
                   precision. Not a replacement for surgery when it&apos;s
                   indicated. A real alternative when it isn&apos;t.
                 </p>
@@ -303,7 +303,7 @@ export default function JointBackOrthopedicPage() {
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-gray-600">
                       Carefully positioned for chronic lower back, facet joint,
-                      and disc-related discomfort. Physician-led, imaging-guided.
+                      and disc-related discomfort. Doctor-led, imaging-guided.
                     </p>
                     <ul className="mt-6 space-y-2.5">
                       {spineProtocols.map((p) => (
@@ -420,7 +420,7 @@ export default function JointBackOrthopedicPage() {
                   <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
                     <Image
                       src="/images/regenerative-medicine/patient-1.jpg"
-                      alt="Physician treating lower back"
+                      alt="Doctor treating lower back"
                       fill
                       className="object-cover"
                     />
@@ -481,7 +481,7 @@ export default function JointBackOrthopedicPage() {
           </div>
         </section>
 
-        {/* Physician authority */}
+        {/* Doctor authority */}
         <section className="bg-stone-50 py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -498,20 +498,20 @@ export default function JointBackOrthopedicPage() {
 
               <FadeUp>
                 <span className="text-xs font-semibold uppercase tracking-widest text-blue-900">
-                  Physician Authority
+                  Doctor Authority
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
                   Led by Dr. Ajit Dhaliwal
                 </h2>
                 <p className="mt-6 text-base leading-relaxed text-gray-600 sm:text-lg">
-                  Internal Medicine–trained physician with extensive experience
+                  Internal Medicine–trained doctor with extensive experience
                   in regenerative approaches to joint, shoulder, and spinal
-                  concerns. Protocols designed and overseen at the physician
+                  concerns. Protocols designed and overseen at the doctor
                   level — not delegated to a technician.
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-3">
                   {[
-                    "Physician-designed",
+                    "Doctor-designed",
                     "Imaging-guided",
                     "Biologically personalized",
                     "Concierge access",

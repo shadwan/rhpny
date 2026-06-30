@@ -12,7 +12,7 @@ const siteUrl = "https://www.rhpny.com";
 export const metadata: Metadata = {
   title: "Peptide Therapy | Precision Protocols for Recovery, Longevity & Performance",
   description:
-    "Physician-prescribed peptide protocols at Regen Health. Clinical-grade peptides for recovery, longevity, metabolic health, cognition, hair, and aesthetics. NYC & Salt Lake City.",
+    "Doctor-prescribed peptide protocols at Regen Health. Clinical-grade peptides for recovery, longevity, metabolic health, cognition, hair, and aesthetics. NYC & Salt Lake City.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     siteName: "Regen Health Physicians",
     title: "Peptide Therapy | Regen Health Physicians",
     description:
-      "Clinical-grade peptide protocols designed and overseen by physicians. Recovery, longevity, performance.",
+      "Clinical-grade peptide protocols designed and overseen by doctors. Recovery, longevity, performance.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Peptide Therapy | Regen Health Physicians",
     description:
-      "Clinical-grade peptide protocols designed and overseen by physicians.",
+      "Clinical-grade peptide protocols designed and overseen by doctors.",
     images: ["/images/og-image.jpg"],
   },
   alternates: {
@@ -112,7 +112,7 @@ const protocols = [
     tag: "Protocol 05",
     title: "Sexual & Hormonal Health",
     tagline: "Restore the signals behind vitality.",
-    body: "Targeted peptides support libido, hormonal balance, and sexual function for both men and women. Designed alongside hormone optimization where indicated, and always under physician supervision.",
+    body: "Targeted peptides support libido, hormonal balance, and sexual function for both men and women. Designed alongside hormone optimization where indicated, and always under doctor supervision.",
     bullets: [
       "Libido and arousal support",
       "Hormonal axis modulation",
@@ -129,7 +129,7 @@ const protocols = [
 ];
 
 const whyPoints = [
-  "Every peptide protocol is physician-designed and overseen — not sold by a clinic counter",
+  "Every peptide protocol is doctor-designed and overseen — not sold by a clinic counter",
   "We use only clinical-grade, properly sourced compounds from licensed compounding pharmacies",
   "Protocols are titrated to your bloodwork, biomarkers, and goals — not generic dosing",
   "Available across our Salt Lake City and New York City locations, with virtual follow-ups",
@@ -163,7 +163,7 @@ const testimonials = [
 const faqs = [
   {
     q: "Are peptides safe?",
-    a: "All Regen Health peptide protocols are physician-designed, prescribed, and monitored. We use only clinical-grade compounds from licensed compounding pharmacies and titrate dosing to your individual biology and labs.",
+    a: "All Regen Health peptide protocols are doctor-designed, prescribed, and monitored. We use only clinical-grade compounds from licensed compounding pharmacies and titrate dosing to your individual biology and labs.",
   },
   {
     q: "How soon will I see results?",
@@ -171,11 +171,11 @@ const faqs = [
   },
   {
     q: "Are peptides legal?",
-    a: "The peptides we prescribe are dispensed by licensed U.S. compounding pharmacies under physician prescription. Regulatory frameworks evolve — your physician will discuss current status, sourcing, and what is appropriate for your situation.",
+    a: "The peptides we prescribe are dispensed by licensed U.S. compounding pharmacies under doctor prescription. Regulatory frameworks evolve — your doctor will discuss current status, sourcing, and what is appropriate for your situation.",
   },
   {
     q: "Can peptides be combined with stem cells, PRP, or hormone therapy?",
-    a: "Yes. Our physicians frequently design layered protocols that combine peptides with regenerative therapies and hormone optimization for compounding effect. Combinations are always evaluated for safety and synergy.",
+    a: "Yes. Our doctors frequently design layered protocols that combine peptides with regenerative therapies and hormone optimization for compounding effect. Combinations are always evaluated for safety and synergy.",
   },
   {
     q: "Do I need to visit in person?",
@@ -206,7 +206,7 @@ export default function PeptidesPage() {
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg lg:leading-[1.6]">
                   Peptides are the messengers your body uses to repair, recover,
-                  and regenerate. Our physician-formulated protocols restore
+                  and regenerate. Our doctor-formulated protocols restore
                   those signals — instructing your biology to perform the way
                   it was designed to. Clinical-grade compounds, individualized
                   dosing, concierge-level oversight.
@@ -270,7 +270,7 @@ export default function PeptidesPage() {
                   protocol around them.
                 </p>
                 <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
-                  Every compound is physician-prescribed, sourced from licensed
+                  Every compound is doctor-prescribed, sourced from licensed
                   compounding pharmacies, and titrated to a target. Cycles are
                   monitored, re-evaluated, and adjusted. The standard is
                   outcomes — not throughput.
@@ -374,7 +374,7 @@ export default function PeptidesPage() {
                   Why Regen Health
                 </span>
                 <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
-                  Physician-led. Lab-driven. Built around you.
+                  Doctor-led. Lab-driven. Built around you.
                 </h2>
               </FadeUp>
 
@@ -456,7 +456,7 @@ export default function PeptidesPage() {
                 </h2>
                 <p className="mt-6 max-w-lg text-base leading-relaxed text-blue-200/70 sm:text-lg">
                   If you are ready for a peptide protocol designed around your
-                  biology — and overseen by physicians who track results — we
+                  biology — and overseen by doctors who track results — we
                   are ready to build it.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">

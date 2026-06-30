@@ -382,10 +382,10 @@ export default function StemCellOfferPage() {
             <div className="physician-content">
               <div className="physician-kicker">
                 <span className="eyebrow-line"></span>
-                Physician Authority
+                Doctor Authority
               </div>
               <h2 className="physician-h2">
-                Physician Insight
+                Doctor Insight
                 <br />
                 <em>Still Matters.</em>
               </h2>
@@ -396,7 +396,7 @@ export default function StemCellOfferPage() {
               </p>
               <p>
                 Today, Dr. Dhaliwal focuses on clinical vision, protocol development,
-                and outcome standards — bringing physician-level insight to the
+                and outcome standards — bringing doctor-level insight to the
                 systems and care models that guide every patient journey.
               </p>
               <div className="physician-credentials">
@@ -516,7 +516,7 @@ export default function StemCellOfferPage() {
           </h2>
           <p>
             $3,999 all-inclusive. IV infusions and injections at Regen Health
-            Physicians in New York.
+            Doctors in New York.
           </p>
           <a className="final-btn" href="#formSection">
             Request Information

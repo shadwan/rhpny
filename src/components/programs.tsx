@@ -520,7 +520,7 @@ export function Programs() {
             Comprehensive Care Pathways
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/50">
-            10 physician-designed programs spanning regeneration, longevity, and
+            10 doctor-designed programs spanning regeneration, longevity, and
             performance.
           </p>
         </FadeUp>

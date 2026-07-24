@@ -79,10 +79,10 @@ const faqs: FaqItem[] = [
         <p>
           You can reach us at{" "}
           <a
-            href="tel:+19295774222"
+            href="tel:+19295773424"
             className="font-medium text-blue-900 underline-offset-2 hover:underline"
           >
-            +1 (929) 577-4222
+            +1 (929) 577-3424
           </a>{" "}
           or{" "}
           <a

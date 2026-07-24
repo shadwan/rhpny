@@ -48,7 +48,7 @@ export const medicalBusinessSchema = {
           url: "https://www.rhpny.com/",
         },
       },
-      telephone: ["+13854427744", "+19295774222"],
+      telephone: ["+13854427744", "+19295773424"],
       email: "admin@rhpny.com",
       medicalSpecialty: ["Physician", "Pain Management Physician"],
       founder: {
@@ -245,7 +245,7 @@ export const medicalBusinessSchema = {
         width: 1024,
         height: 1024,
       },
-      telephone: ["+13854427744", "+19295774222"],
+      telephone: ["+13854427744", "+19295773424"],
       email: "admin@rhpny.com",
       medicalSpecialty: [
         { "@type": "MedicalSpecialty", name: "Physician" },

@@ -1,7 +1,7 @@
 export const SITE_URL = "https://www.rhpny.com";
 export const SITE_NAME = "Regen Health Physicians";
-export const PHONE_NUMBER = "+1 (929) 577-4222";
-export const PHONE_HREF = "tel:+19295774222";
+export const PHONE_NUMBER = "+1 (929) 577-3424";
+export const PHONE_HREF = "tel:+19295773424";
 export const EMAIL = "admin@rhpny.com";
 export const BOOKING_URL = "/book";
 export const TYPEFORM_ID = "01KQFVB33ZMA1S6H8D205BJ7PD";

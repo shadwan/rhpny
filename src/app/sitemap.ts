@@ -30,6 +30,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/peptides", changeFrequency: "monthly", priority: 0.9 },
     { path: "/joint-back-orthopedic", changeFrequency: "monthly", priority: 0.9 },
     { path: "/chronic-disease", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/mens-sexual-health", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/womens-sexual-health", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/longevity-program", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/locations/new-york", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/locations/salt-lake-city", changeFrequency: "monthly", priority: 0.8 },
     { path: "/blog", changeFrequency: "daily", priority: 0.8 },
   ];
 

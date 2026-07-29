@@ -11,9 +11,11 @@ import {
 
 const quickLinks = [
   { label: "Services", href: "#services" },
+  { label: "Longevity Program", href: "/longevity-program" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "#about" },
-  { label: "Programs", href: "#programs" },
+  { label: "New York Clinic", href: "/locations/new-york" },
+  { label: "Salt Lake City Clinic", href: "/locations/salt-lake-city" },
   { label: "Terms and Conditions", href: "/terms-and-conditions" },
   { label: "Privacy Policy", href: "/privacy-policy" },
 ];

@@ -35,14 +35,15 @@ NYC page keeps the shared `<Team />`.
 - **Shared with NYC (real photos reused):** Ajit Dhaliwal, Dr. Ravneet Dhaliwal
   (Utah bio: Family Medicine–trained), Debra Mollé, Irene Kim PA-C, Jhonelle
   Gravesandy, Jay Maly.
-- **Utah-only (new — initials avatar until a headshot is added):**
-  - **Jhonny Nobles** — Founding Partner
-  - **Mike Butterfield** — Founding Partner
-  - **Valerie Charlton** — Physician Associate (Utah native)
-  - **Justin Loder** — Physician Assistant (orthopedics / sports medicine, ex-Navy)
-  - ⚠️ Headshots for these four are on rhputah.com's About page but the Elementor
-    markup couldn't be mapped to each person reliably (one was an AI placeholder).
-    **Send the four photos and I'll wire them in.**
+- **Utah-only (new):**
+  - **Mike Butterfield** — Founding Partner · ✅ headshot extracted from rhputah.com
+  - **Justin Loder** — Physician Assistant (orthopedics / sports medicine, ex-Navy) · ✅ headshot extracted
+  - **Jhonny Nobles** — Founding Partner · initials avatar (no photo on their site)
+  - **Valerie Charlton** — Physician Associate (Utah native) · initials avatar (no photo on their site)
+  - The Utah About page mixed lifestyle/patient photos with staff headshots and used
+    an AI placeholder for two members, so only Mike's and Justin's real headshots
+    could be confidently mapped (confirmed against the roster). Jhonny + Valerie show
+    an initials avatar until real photos are supplied.
 
 ### Location system
 - `src/lib/locations.ts` — single source of truth for both clinics (address, phone,

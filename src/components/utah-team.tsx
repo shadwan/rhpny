@@ -36,6 +36,7 @@ const team: Member[] = [
   {
     name: "Mike Butterfield",
     role: "Founding Partner",
+    image: "/images/utah/team/mike-butterfield.webp",
     bio: "20+ years of executive leadership with more than $185M in revenue growth managed. Mike brings strategic business leadership, clinic operations and growth expertise, executive talent and coaching, and a commitment to patient-centric care models.",
   },
   {
@@ -70,6 +71,7 @@ const team: Member[] = [
   {
     name: "Justin Loder",
     role: "Physician Assistant",
+    image: "/images/utah/team/justin-loder.webp",
     bio: "Justin is an accomplished Physician Assistant with deep experience in orthopedic surgery and sports medicine. He earned his degree from Eastern Virginia Medical School and served in the United States Navy as a commissioned Medical and Naval Officer for 12 years, including an Orthopedic Surgery Fellowship at Naval Medical Center Portsmouth. With over 15 years in the health industry, he brings extensive expertise in the diagnosis, management, and surgical assistance of sports and musculoskeletal injuries — and is glad to be back home in Utah serving the community.",
   },
 ];

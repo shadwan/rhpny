@@ -31,6 +31,7 @@ const team: Member[] = [
   {
     name: "Jhonny Nobles",
     role: "Founding Partner",
+    image: "/images/utah/team/jhonny-nobles.webp",
     bio: "With more than 20 years of experience in business development and relationship management, Jhonny brings deep Salt Lake City community ties and a background in medical staffing and healthcare. A medical and wellness entrepreneur focused on building patient-centered care in Utah.",
   },
   {
@@ -66,6 +67,7 @@ const team: Member[] = [
   {
     name: "Valerie Charlton",
     role: "Physician Associate",
+    image: "/images/utah/team/valerie-charlton.webp",
     bio: "Valerie Charlton is a board-certified Physician Associate and Utah native dedicated to helping patients optimize their health, vitality, and longevity through regenerative medicine. She completed training and board certification in nuclear medicine and CT technology at the University of Utah before earning her Master of Science in Physician Assistant Studies at Dominican University of California. Her clinical experience spans primary care, gastroenterology, and dermatology, with a current focus on stem cell therapy, peptide therapy, and aesthetic treatments.",
   },
   {

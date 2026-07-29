@@ -36,13 +36,23 @@ export const metadata: Metadata = {
 type Member = {
   name: string;
   role: string;
-  image: string;
+  image?: string;
   bio: string;
   specialties: string[];
   phone?: string;
   phoneHref?: string;
   calendar?: string;
 };
+
+function memberInitials(name: string): string {
+  return name
+    .replace(/,.*$/, "")
+    .split(/\s+/)
+    .filter((w) => /^[A-Za-z]/.test(w))
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("");
+}
 
 const team: Member[] = [
   {
@@ -117,6 +127,52 @@ const team: Member[] = [
     phone: "+1 (646) 553-3030",
     phoneHref: "tel:+16465533030",
     calendar: "https://calendly.com/dmolle-rhpny/30min",
+  },
+  {
+    name: "Jhonny Nobles",
+    role: "Founding Partner",
+    bio: "With more than 20 years of experience in business development and relationship management, Jhonny brings deep Salt Lake City community ties and a background in medical staffing and healthcare. A medical and wellness entrepreneur focused on building patient-centered care in Utah.",
+    specialties: [
+      "20+ Years in Business Development",
+      "Salt Lake City Community Ties",
+      "Medical Staffing & Healthcare",
+      "Wellness Entrepreneurship",
+    ],
+  },
+  {
+    name: "Mike Butterfield",
+    role: "Founding Partner",
+    image: "/images/utah/team/mike-butterfield.webp",
+    bio: "20+ years of executive leadership with more than $185M in revenue growth managed. Mike brings strategic business leadership, clinic operations and growth expertise, executive talent and coaching, and a commitment to patient-centric care models.",
+    specialties: [
+      "Strategic Business Leadership",
+      "Clinic Operations & Growth",
+      "Executive Talent & Coaching",
+      "Patient-Centric Care Models",
+    ],
+  },
+  {
+    name: "Valerie Charlton",
+    role: "Physician Associate",
+    bio: "Valerie Charlton is a board-certified Physician Associate and Utah native dedicated to helping patients optimize their health, vitality, and longevity through regenerative medicine. She completed training and board certification in nuclear medicine and CT technology at the University of Utah before earning her Master of Science in Physician Assistant Studies at Dominican University of California. Her clinical experience spans primary care, gastroenterology, and dermatology, with a current focus on stem cell therapy, peptide therapy, and aesthetic treatments.",
+    specialties: [
+      "Aesthetics & Dermatology",
+      "Gastroenterology / Weight Loss",
+      "Peptide Protocols",
+      "Stem Cell Therapy",
+    ],
+  },
+  {
+    name: "Justin Loder",
+    role: "Physician Assistant",
+    image: "/images/utah/team/justin-loder.webp",
+    bio: "Justin is an accomplished Physician Assistant with deep experience in orthopedic surgery and sports medicine. He earned his degree from Eastern Virginia Medical School and served in the United States Navy as a commissioned Medical and Naval Officer for 12 years, including an Orthopedic Surgery Fellowship at Naval Medical Center Portsmouth. With over 15 years in the health industry, he brings extensive expertise in the diagnosis, management, and surgical assistance of sports and musculoskeletal injuries — and is glad to be back home in Utah serving the community.",
+    specialties: [
+      "Orthopedics & Sports Medicine",
+      "Chronic Disease Management",
+      "Emergency & Trauma Care",
+      "Procedural US Guidance",
+    ],
   },
 ];
 
@@ -313,13 +369,21 @@ export default function AboutPage() {
                 >
                   <FadeIn className="lg:col-span-4">
                     <div className="relative mx-auto aspect-[3/4] w-full max-w-[260px] overflow-hidden rounded-2xl lg:max-w-[320px]">
-                      <Image
-                        src={m.image}
-                        alt={m.name}
-                        fill
-                        sizes="(min-width: 1024px) 320px, 260px"
-                        className="object-cover"
-                      />
+                      {m.image ? (
+                        <Image
+                          src={m.image}
+                          alt={m.name}
+                          fill
+                          sizes="(min-width: 1024px) 320px, 260px"
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-900 to-blue-950">
+                          <span className="font-heading text-5xl font-bold uppercase tracking-wide text-white/90">
+                            {memberInitials(m.name)}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </FadeIn>
 
@@ -327,7 +391,7 @@ export default function AboutPage() {
                     <div className="max-w-2xl">
                       <div className="flex items-center gap-3">
                         <span className="font-mono text-xs font-semibold tabular-nums text-blue-900/60">
-                          0{i + 1}
+                          {String(i + 1).padStart(2, "0")}
                         </span>
                         <span className="h-px flex-1 bg-gray-200 lg:flex-none lg:w-12" />
                         <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-900">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Team } from "@/components/team";
+import { UtahTeam } from "@/components/utah-team";
 import { Testimonials } from "@/components/testimonials";
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/motion";
 import { BOOKING_URL } from "@/lib/constants";
@@ -153,8 +154,8 @@ export function LocationPageView({ slug }: { slug: LocationSlug }) {
         </div>
       </section>
 
-      {/* Shared team + testimonials */}
-      <Team />
+      {/* Team (Salt Lake City has its own roster) + testimonials */}
+      {slug === "salt-lake-city" ? <UtahTeam /> : <Team />}
       <Testimonials />
 
       {/* CTA + other location */}

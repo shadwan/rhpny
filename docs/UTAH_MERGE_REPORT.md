@@ -27,8 +27,22 @@ Twitter cards, and JSON-LD. All render as static pages.
   site (its "Premature Ejaculation" card described hair loss) — rewritten correctly.
 - **Images pulled from rhputah.com** → `public/images/utah/` (6 WebP photos: hero,
   men's, women's, section images).
-- Location pages **reuse the shared team + testimonials** (per decision) — same as
-  the NYC/about experience.
+
+### Salt Lake City team (differs from NYC)
+The Utah About page has a **different roster** than rhpny — six shared, four
+Utah-only. The SLC location page now renders its own team (`utah-team.tsx`); the
+NYC page keeps the shared `<Team />`.
+- **Shared with NYC (real photos reused):** Ajit Dhaliwal, Dr. Ravneet Dhaliwal
+  (Utah bio: Family Medicine–trained), Debra Mollé, Irene Kim PA-C, Jhonelle
+  Gravesandy, Jay Maly.
+- **Utah-only (new — initials avatar until a headshot is added):**
+  - **Jhonny Nobles** — Founding Partner
+  - **Mike Butterfield** — Founding Partner
+  - **Valerie Charlton** — Physician Associate (Utah native)
+  - **Justin Loder** — Physician Assistant (orthopedics / sports medicine, ex-Navy)
+  - ⚠️ Headshots for these four are on rhputah.com's About page but the Elementor
+    markup couldn't be mapped to each person reliably (one was an AI placeholder).
+    **Send the four photos and I'll wire them in.**
 
 ### Location system
 - `src/lib/locations.ts` — single source of truth for both clinics (address, phone,

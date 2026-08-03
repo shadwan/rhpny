@@ -69,7 +69,7 @@ const faqs: FaqItem[] = [
         <div className="space-y-3">
           <div>
             <p className="font-semibold text-gray-900">New York City</p>
-            <p>184 E 70th St, Level B1, Suite B1, New York, NY 10021</p>
+            <p>575 Madison Ave, Suite 2300, New York, NY 10022</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900">Salt Lake City</p>

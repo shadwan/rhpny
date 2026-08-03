@@ -9,8 +9,8 @@ export const TYPEFORM_ID = "01KQFVB33ZMA1S6H8D205BJ7PD";
 export const ADDRESSES = {
   nyc: {
     label: "New York City",
-    street: "184 E 70th St Level B1, Suite B1",
-    city: "New York, NY 10021",
+    street: "575 Madison Ave, Suite 2300",
+    city: "New York, NY 10022",
   },
   utah: {
     label: "Salt Lake City",

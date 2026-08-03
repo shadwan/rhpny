@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
+import { LocationSwitcher } from "@/components/location-switcher";
 import {
   PHONE_NUMBER,
   PHONE_HREF,
@@ -54,12 +55,22 @@ const sections: NavSection[] = [
         href: "/chronic-disease",
         description: "Root-cause regenerative care.",
       },
+      {
+        label: "Men's Sexual Health",
+        href: "/mens-sexual-health",
+        description: "Regenerative ED, testosterone & performance care.",
+      },
+      {
+        label: "Women's Sexual Health",
+        href: "/womens-sexual-health",
+        description: "Libido, hormones & intimate wellness.",
+      },
     ],
   },
 ];
 
 const flatLinks: { label: string; href: string }[] = [
-  { label: "Longevity Programs", href: "#programs" },
+  { label: "Longevity", href: "/longevity-program" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
@@ -185,28 +196,11 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Right: phone + CTA + mobile toggle */}
+          {/* Right: location switcher (with localized phone) + CTA + mobile toggle */}
           <div className="flex items-center gap-4 justify-self-end">
-            <a
-              href={PHONE_HREF}
-              className="hidden items-center gap-2 text-sm font-medium text-gray-700 transition-colors hover:text-blue-900 xl:flex"
-            >
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={1.7}
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-                />
-              </svg>
-              {PHONE_NUMBER}
-            </a>
+            <div className="hidden lg:block">
+              <LocationSwitcher />
+            </div>
             <Link
               href={BOOKING_URL}
               className="hidden rounded-full bg-blue-900 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-blue-800 hover:shadow-lg hover:shadow-blue-900/15 lg:inline-flex"
@@ -353,6 +347,32 @@ export function Header() {
                       </Link>
                     </li>
                   ))}
+                </ul>
+              </div>
+
+              <div className="mb-8">
+                <p className="text-xs font-semibold uppercase tracking-widest text-blue-900">
+                  Locations
+                </p>
+                <ul className="mt-4 space-y-3">
+                  <li>
+                    <Link
+                      href="/locations/new-york"
+                      onClick={() => setMobileOpen(false)}
+                      className="block text-base font-semibold text-gray-900 hover:text-blue-900"
+                    >
+                      New York City
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/locations/salt-lake-city"
+                      onClick={() => setMobileOpen(false)}
+                      className="block text-base font-semibold text-gray-900 hover:text-blue-900"
+                    >
+                      Salt Lake City
+                    </Link>
+                  </li>
                 </ul>
               </div>
 

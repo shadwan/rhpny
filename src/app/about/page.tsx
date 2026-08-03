@@ -518,7 +518,7 @@ export default function AboutPage() {
                     {ADDRESSES.nyc.city}
                   </p>
                   <p className="mt-6 text-sm text-gray-500">
-                    Upper East Side concierge clinic — private clinical
+                    Midtown Manhattan concierge clinic — private clinical
                     setting for in-person consultations, evaluations, and
                     regenerative treatment.
                   </p>

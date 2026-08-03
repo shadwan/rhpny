@@ -10,9 +10,9 @@ const loc = LOCATIONS["new-york"];
 const path = "/locations/new-york";
 
 export const metadata: Metadata = {
-  title: "New York City Clinic | Regenerative Medicine on the Upper East Side",
+  title: "New York City Clinic | Regenerative Medicine in Midtown Manhattan",
   description:
-    "Regen Health Physicians in New York City — physician-led regenerative medicine, hair restoration, aesthetics, peptides, and longevity care. 184 E 70th St, Upper East Side. Book a consultation.",
+    "Regen Health Physicians in New York City — physician-led regenerative medicine, hair restoration, aesthetics, peptides, and longevity care. 575 Madison Ave, Midtown Manhattan. Book a consultation.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Regen Health Physicians",
     title: "New York City Clinic | Regen Health Physicians",
     description:
-      "Physician-led regenerative medicine on the Upper East Side of New York City.",
+      "Physician-led regenerative medicine in Midtown Manhattan, New York City.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {

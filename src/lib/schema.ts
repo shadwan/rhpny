@@ -86,19 +86,19 @@ export const medicalBusinessSchema = {
           name: "RegenHealth Physicians - New York",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "184 E 70th St Level B1, Suite B1",
+            streetAddress: "575 Madison Ave, Suite 2300",
             addressLocality: "New York City",
             addressRegion: "NY",
-            postalCode: "10021",
+            postalCode: "10022",
             addressCountry: "US",
           },
           geo: {
             "@type": "GeoCoordinates",
-            latitude: 40.7685149,
-            longitude: -73.9619824,
+            latitude: 40.7624,
+            longitude: -73.9722,
           },
           hasMap:
-            "https://www.google.com/maps/place/RegenHealth+Physicians/@40.7685149,-73.9619824,579m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89c259244e92ad1d:0x31c3da4aa5aa836c!8m2!3d40.7685149!4d-73.9619824!16s%2Fg%2F11stl8r_v2?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D",
+            "https://www.google.com/maps/search/?api=1&query=575+Madison+Ave+Suite+2300+New+York+NY+10022",
           sameAs: "https://en.wikipedia.org/wiki/New_York_City",
           openingHoursSpecification: [
             {
@@ -265,10 +265,10 @@ export const medicalBusinessSchema = {
       address: [
         {
           "@type": "PostalAddress",
-          streetAddress: "184 E 70th St Level B1, Suite B1",
+          streetAddress: "575 Madison Ave, Suite 2300",
           addressLocality: "New York City",
           addressRegion: "NY",
-          postalCode: "10021",
+          postalCode: "10022",
           addressCountry: "US",
         },
         {
@@ -282,11 +282,11 @@ export const medicalBusinessSchema = {
       ],
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 40.7685149,
-        longitude: -73.9619824,
+        latitude: 40.7624,
+        longitude: -73.9722,
       },
       hasMap:
-        "https://www.google.com/maps/place/RegenHealth+Physicians/@40.7685149,-73.9619824,579m/data=!3m2!1e3!4b1!4m6!3m5!1s0x89c259244e92ad1d:0x31c3da4aa5aa836c!8m2!3d40.7685149!4d-73.9619824!16s%2Fg%2F11stl8r_v2?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D",
+        "https://www.google.com/maps/search/?api=1&query=575+Madison+Ave+Suite+2300+New+York+NY+10022",
       availableService: [
         {
           "@type": "MedicalTherapy",

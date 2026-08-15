@@ -73,25 +73,16 @@ export default function BookPage() {
                 advocacy team directly.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                
-                  href="tel:+19295773424"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1F6FB2] text-white px-8 py-4 text-base font-medium hover:bg-[#195a91] transition-colors"
-                >
+                <a href="tel:+19295773424" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1F6FB2] text-white px-8 py-4 text-base font-medium hover:bg-[#195a91] transition-colors">
                   Call (929) 577-3424
                 </a>
-                
-                  href="sms:+19295773424"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#1F6FB2] text-[#1F6FB2] px-8 py-4 text-base font-medium hover:bg-[#1F6FB2]/5 transition-colors"
-                >
+                <a href="sms:+19295773424" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#1F6FB2] text-[#1F6FB2] px-8 py-4 text-base font-medium hover:bg-[#1F6FB2]/5 transition-colors">
                   Text Us
                 </a>
               </div>
               <p className="text-center text-xs text-neutral-400 mt-4">
                 Or email{" "}
-                
-                  href="mailto:admin@rhpny.com"
-                  className="underline hover:text-[#1F6FB2]"
-                >
+                <a href="mailto:admin@rhpny.com" className="underline hover:text-[#1F6FB2]">
                   admin@rhpny.com
                 </a>
               </p>

@@ -329,7 +329,7 @@ export default function StemCellOfferPage() {
                 <h3>FDA-Registered Lab Source</h3>
                 <p>
                   We source directly — <strong>no brokers, no middlemen</strong>{" "}
-                  adding markup. That&apos;s how we keep this at $3,999 instead of
+                  adding markup. That&apos;s how we keep this at $4,999 instead of
                   $12,000. Same lab. Same cells. Lower price.
                 </p>
               </div>
@@ -398,7 +398,7 @@ export default function StemCellOfferPage() {
             <em>Your Best?</em>
           </h2>
           <p>
-            $3,999 all-inclusive. IV infusions and injections at Regen Health
+            $4,999 all-inclusive. IV infusions and injections at Regen Health
             Doctors in New York.
           </p>
           <a className="final-btn" href="#formSection">

@@ -369,7 +369,7 @@ export default function StemCellOfferPage() {
               </div>
               <div className="c-row">
                 <div className="c-cell them">✗ &nbsp;$8,000–$15,000 per treatment</div>
-                <div className="c-cell us">✓ &nbsp;$3,999 all-inclusive</div>
+                <div className="c-cell us">✓ &nbsp;$4,999 all-inclusive</div>
               </div>
               <div className="c-row">
                 <div className="c-cell them">✗ &nbsp;Hidden pricing — &quot;come in first&quot;</div>

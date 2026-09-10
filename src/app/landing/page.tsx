@@ -181,7 +181,7 @@ export default function StemCellOfferPage() {
             </p>
 
             <div className="hero-price-block">
-              <div className="price-big">$3,999</div>
+              <div className="price-big">$4,999</div>
               <div className="price-right">
                 <s>$4,999</s>
                 <span className="savings-tag">Save $1,000</span>

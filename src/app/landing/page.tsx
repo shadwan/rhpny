@@ -45,8 +45,8 @@ export default function StemCellOfferPage() {
         @media (max-width: 1100px) { .scc-page .hero { grid-template-columns: 1fr 480px; } }
         @media (max-width: 960px) { .scc-page .hero { grid-template-columns: 1fr; } }
 
-        .scc-page .hero-left { padding: 72px 72px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
-        @media (max-width: 1100px) { .scc-page .hero-left { padding: 64px 48px; } }
+        .scc-page .hero-left { padding: 56px 72px 64px; display: flex; flex-direction: column; justify-content: flex-start; border-right: 1px solid var(--border); }
+        @media (max-width: 1100px) { .scc-page .hero-left { padding: 48px 48px 56px; } }
         @media (max-width: 960px)  { .scc-page .hero-left { padding: 44px 28px 36px; border-right: none; border-bottom: 1px solid var(--border); } }
         @media (max-width: 500px)  { .scc-page .hero-left { padding: 36px 22px 32px; } }
 
@@ -55,6 +55,7 @@ export default function StemCellOfferPage() {
         @keyframes sccblink { 0%,100%{opacity:1} 50%{opacity:0.3} }
         @media (prefers-reduced-motion: reduce) { .scc-page .eyebrow-dot { animation: none; } }
 
+        .scc-page .hero-left > * { max-width: 820px; }
         .scc-page .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.4em, 4.4vw, 4.6em); font-weight: 900; line-height: 1.02; letter-spacing: -0.03em; color: var(--black); margin-bottom: 24px; }
         .scc-page .hero h1 .anchor { display: block; font-style: italic; color: #b3b3b3; font-size: 0.62em; line-height: 1.15; margin-bottom: 10px; }
         .scc-page .hero h1 .anchor s { text-decoration-thickness: 3px; }
@@ -77,8 +78,8 @@ export default function StemCellOfferPage() {
         .scc-page .checklist li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.97em; color: var(--dark); line-height: 1.5; }
         .scc-page .chk { width: 20px; height: 20px; border-radius: 50%; background: rgba(58,161,126,0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.65em; color: var(--sage); font-weight: 700; margin-top: 1px; }
 
-        .scc-page .hero-right { background: var(--off-white); display: flex; flex-direction: column; justify-content: center; padding: 56px 56px; }
-        @media (max-width: 1100px) { .scc-page .hero-right { padding: 48px 40px; } }
+        .scc-page .hero-right { background: var(--off-white); display: flex; flex-direction: column; justify-content: flex-start; padding: 48px 56px 56px; }
+        @media (max-width: 1100px) { .scc-page .hero-right { padding: 40px 40px 48px; } }
         @media (max-width: 960px)  { .scc-page .hero-right { padding: 44px 24px 52px; } }
 
         .scc-page .form-kicker { font-size: 0.85em; font-weight: 600; color: var(--sage); margin-bottom: 8px; }
@@ -288,34 +289,6 @@ export default function StemCellOfferPage() {
           </div>
         </div>
 
-        {/* ───────── HOW IT WORKS ───────── */}
-        <section className="sec">
-          <div className="sec-inner">
-            <h2 className="sec-h2 center">Three simple steps</h2>
-            <p className="sec-intro center">
-              Filling out the form doesn&apos;t commit you to anything. It just starts the
-              conversation.
-            </p>
-            <div className="steps">
-              <div className="step">
-                <div className="step-num">1</div>
-                <h3>Answer a few questions</h3>
-                <p>Takes about a minute. Tell us what you&apos;re hoping to address so we can prepare for your call.</p>
-              </div>
-              <div className="step">
-                <div className="step-num">2</div>
-                <h3>Talk with our team</h3>
-                <p>A patient coordinator walks you through the process, answers your questions, and reviews your candidacy with the medical team.</p>
-              </div>
-              <div className="step">
-                <div className="step-num">3</div>
-                <h3>Get treated in Manhattan</h3>
-                <p>If you&apos;re a good fit, you&apos;ll schedule your treatment at our Madison Avenue clinic at the $3,999 price.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ───────── PRODUCT EDUCATION ───────── */}
         <section className="sec edu">
           <div className="sec-inner edu-grid">
@@ -459,6 +432,34 @@ export default function StemCellOfferPage() {
               <div className="physician-credentials">
                 <div className="physician-sig-name">Ajit Dhaliwal, MD, MBA</div>
                 <div className="physician-sig-role">Founder, Regen Health Physicians</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ───────── HOW IT WORKS ───────── */}
+        <section className="sec">
+          <div className="sec-inner">
+            <h2 className="sec-h2 center">Three simple steps</h2>
+            <p className="sec-intro center">
+              Filling out the form doesn&apos;t commit you to anything. It just starts the
+              conversation.
+            </p>
+            <div className="steps">
+              <div className="step">
+                <div className="step-num">1</div>
+                <h3>Answer a few questions</h3>
+                <p>Takes about a minute. Tell us what you&apos;re hoping to address so we can prepare for your call.</p>
+              </div>
+              <div className="step">
+                <div className="step-num">2</div>
+                <h3>Talk with our team</h3>
+                <p>A patient coordinator walks you through the process, answers your questions, and reviews your candidacy with the medical team.</p>
+              </div>
+              <div className="step">
+                <div className="step-num">3</div>
+                <h3>Get treated in Manhattan</h3>
+                <p>If you&apos;re a good fit, you&apos;ll schedule your treatment at our Madison Avenue clinic at the $3,999 price.</p>
               </div>
             </div>
           </div>

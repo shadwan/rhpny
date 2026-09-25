@@ -188,6 +188,38 @@ export default function StemCellOfferPage() {
 
         .scc-page .disclaimer { padding: 32px 40px 40px; text-align: center; font-size: 0.72em; color: #aaa; line-height: 1.7; max-width: 820px; margin: 0 auto; }
 
+
+        /* Social proof */
+        .scc-page .hero-proof { display: flex; align-items: center; gap: 14px; margin: -12px 0 32px; }
+        .scc-page .avatars { display: flex; }
+        .scc-page .avatars img, .scc-page .avatars .av { width: 38px; height: 38px; border-radius: 50%; border: 2px solid #fff; object-fit: cover; margin-left: -10px; background: var(--off-white); }
+        .scc-page .avatars > :first-child { margin-left: 0; }
+        .scc-page .hero-proof-text { font-size: 0.9em; color: var(--mid); line-height: 1.4; }
+        .scc-page .hero-proof-text strong { color: var(--black); }
+        .scc-page .stars { color: #E8A317; letter-spacing: 1px; }
+
+        .scc-page .affil { display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; margin-bottom: 56px; font-size: 0.9em; color: var(--mid); }
+        .scc-page .affil-logos { display: flex; align-items: center; gap: 28px; }
+        .scc-page .affil-logos img { height: 40px; width: auto; filter: grayscale(1); opacity: 0.75; }
+        .scc-page .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        @media (max-width: 960px) { .scc-page .t-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 620px) { .scc-page .t-grid { grid-template-columns: 1fr; } }
+        .scc-page .t-card { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; padding: 28px 26px; display: flex; flex-direction: column; }
+        .scc-page .t-tag { align-self: flex-start; font-size: 0.75em; font-weight: 700; color: var(--accent); background: rgba(31,111,178,0.08); padding: 4px 10px; border-radius: 20px; margin-bottom: 14px; }
+        .scc-page .t-card blockquote { font-size: 0.95em; color: var(--dark); line-height: 1.7; flex: 1; margin-bottom: 20px; }
+        .scc-page .t-person { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border); }
+        .scc-page .t-person img, .scc-page .t-person .av { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; background: var(--off-white); }
+        .scc-page .t-name { font-weight: 700; font-size: 0.92em; }
+        .scc-page .t-loc { font-size: 0.8em; color: var(--light); }
+        .scc-page .t-disclaim { text-align: center; font-size: 0.78em; color: var(--light); margin-top: 28px; line-height: 1.6; }
+
+        .scc-page .pull { background: var(--bg); padding: 96px 40px; }
+        @media (max-width: 500px) { .scc-page .pull { padding: 64px 22px; } }
+        .scc-page .pull-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+        .scc-page .pull blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.5em, 2.8vw, 2.2em); line-height: 1.35; color: var(--black); margin-bottom: 28px; }
+        .scc-page .pull .t-person { justify-content: center; border-top: none; padding-top: 0; }
+        .scc-page .pull .t-person > div { text-align: left; }
+
         /* Sticky mobile CTA */
         .scc-page .sticky-cta { display: none; }
         @media (max-width: 960px) {
@@ -231,6 +263,19 @@ export default function StemCellOfferPage() {
               </div>
             </div>
             <p className="price-caption">All-inclusive. No hidden fees. No obligation to find out more.</p>
+
+            <div className="hero-proof">
+              <div className="avatars">
+                <img src="/images/testimonials/janel-nobles.png" alt="" />
+                <img src="/images/testimonials/regina-cafarchio.png" alt="" />
+                <img src="/images/testimonials/mike-butterfield.png" alt="" />
+                <img src="/images/testimonials/pooja-bhatnagar.png" alt="" />
+              </div>
+              <div className="hero-proof-text">
+                <span className="stars">★★★★★</span><br />
+                <strong>Trusted by 500+ patients</strong> in New York and beyond
+              </div>
+            </div>
 
             <a className="mobile-jump" href="#formSection">Check if I qualify</a>
 
@@ -288,6 +333,80 @@ export default function StemCellOfferPage() {
             <div>👩‍⚕️ Physician-led care</div>
           </div>
         </div>
+
+        {/* ───────── SOCIAL PROOF ───────── */}
+        <section className="sec">
+          <div className="sec-inner">
+            <h2 className="sec-h2 center">Patients fly in from across the country</h2>
+            <p className="sec-intro center" style={{ marginBottom: "28px" }}>
+              Real reviews from real Regen Health patients, from NYC locals to people who flew in from Canada.
+            </p>
+            <div className="affil">
+              <span>Patients have included individuals affiliated with</span>
+              <div className="affil-logos">
+                <img src="/images/partners/nfl.png" alt="NFL" />
+                <img src="/images/partners/fdny.png" alt="FDNY" />
+                <img src="/images/partners/mma.png" alt="MMA" />
+              </div>
+            </div>
+            <div className="t-grid">
+              <div className="t-card">
+                <span className="t-tag">Back &amp; shoulders</span>
+                <blockquote>&ldquo;I flew across the country to NYC&hellip; After a thorough examination, we decided that direct injections were the best way to tackle my chronic lower back pain and severe issues in both shoulders. The whole experience made me feel like I was their top priority.&rdquo;</blockquote>
+                <div className="t-person">
+                  <img src="/images/testimonials/mike-butterfield.png" alt="Mike Butterfield" />
+                  <div><div className="t-name">Mike Butterfield</div><div className="t-loc">Flew in cross-country</div></div>
+                </div>
+              </div>
+              <div className="t-card">
+                <span className="t-tag">Knee</span>
+                <blockquote>&ldquo;Although I live in SLC, Utah, I made the decision to fly to NY to get stem cell treatment&hellip; I was informed of every step clearly. The facility was clean and comfortable and I was confident in my personalized treatment plan. I love that there was zero downtime.&rdquo;</blockquote>
+                <div className="t-person">
+                  <img src="/images/testimonials/janel-nobles.png" alt="Janel Nobles" />
+                  <div><div className="t-name">Janel Nobles</div><div className="t-loc">Salt Lake City, UT</div></div>
+                </div>
+              </div>
+              <div className="t-card">
+                <span className="t-tag">Knee</span>
+                <blockquote>&ldquo;I&apos;ve had developing knee pain over the past few years that started to affect my ability to workout&hellip; After my injection I am able to run again with no pain.&rdquo;</blockquote>
+                <div className="t-person">
+                  <img src="/images/testimonials/regina-cafarchio.png" alt="Regina Cafarchio" />
+                  <div><div className="t-name">Regina Cafarchio</div><div className="t-loc">New York, NY</div></div>
+                </div>
+              </div>
+              <div className="t-card">
+                <span className="t-tag">Shoulder &amp; neck</span>
+                <blockquote>&ldquo;I have been dealing with crippling shoulder and neck pain after a dance injury&hellip; After my treatment, my pain significantly improved&hellip; I am now able to dance freely like I used to before my injury.&rdquo;</blockquote>
+                <div className="t-person">
+                  <img src="/images/testimonials/pooja-bhatnagar.png" alt="Pooja Bhatnagar" />
+                  <div><div className="t-name">Pooja Bhatnagar</div><div className="t-loc">Dance injury</div></div>
+                </div>
+              </div>
+              <div className="t-card">
+                <span className="t-tag">Multiple joints</span>
+                <blockquote>&ldquo;I had stem cell injections in my left elbow, both shoulders, both knees, and my L4 L5 in my back&hellip; I am able to train mma again, lift weights and do things that I haven&apos;t done in years due to injury!&rdquo;</blockquote>
+                <div className="t-person">
+                  <img src="/images/testimonials/ecf-mma-gym.png" alt="ECF MMA Gym" />
+                  <div><div className="t-name">ECF MMA Gym</div><div className="t-loc">Combat athletes</div></div>
+                </div>
+              </div>
+              <div className="t-card">
+                <span className="t-tag">Knee</span>
+                <blockquote>&ldquo;I&apos;ve visited countless of physiotherapists who&apos;s given me a ton of exercises, but without seeing any progress&hellip; He is super-friendly, knowledgeable, and solutions-oriented&hellip; he explained how it works.&rdquo;</blockquote>
+                <div className="t-person">
+                  <img src="/images/testimonials/fredrik-h.png" alt="Fredrik H" />
+                  <div><div className="t-name">Fredrik H</div><div className="t-loc">Sports recovery</div></div>
+                </div>
+              </div>
+            </div>
+            <p className="t-disclaim">
+              Real patient reviews, condensed for length (&hellip; marks removed text). Individual results vary and are not guaranteed.
+            </p>
+            <div className="inline-cta">
+              <a className="btn" href="#formSection">Check if I qualify for $3,999</a>
+            </div>
+          </div>
+        </section>
 
         {/* ───────── PRODUCT EDUCATION ───────── */}
         <section className="sec edu">
@@ -495,6 +614,17 @@ export default function StemCellOfferPage() {
                 <summary>Am I committing to anything by filling out the form?</summary>
                 <p>No. The form just starts a conversation. You&apos;ll get your questions answered and decide from there.</p>
               </details>
+            </div>
+          </div>
+        </section>
+
+        {/* ───────── PULL QUOTE ───────── */}
+        <section className="pull">
+          <div className="pull-inner">
+            <blockquote>&ldquo;I flew in all the way from Canada with my father for stem cell treatment for my dad&apos;s lower back. He&apos;s had multiple surgeries and nothing worked&hellip; The whole process was seamless.&rdquo;</blockquote>
+            <div className="t-person">
+              <img src="/images/testimonials/jan-shah.png" alt="Jan Shah" />
+              <div><div className="t-name">Jan Shah</div><div className="t-loc">Flew in from Canada</div></div>
             </div>
           </div>
         </section>
